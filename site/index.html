@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Last Caretaker Archive — Voyage Logs &amp; Quest Subtitles</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<main>
+<div class="device" id="device">
+
+  <div class="toolbar">
+    <nav class="tabs" id="mode-tabs">
+      <button class="tab active" data-mode="browse">Browse</button>
+      <button class="tab" data-mode="compare">Compare</button>
+    </nav>
+
+    <div class="toolbar-controls" id="browse-controls">
+      <div class="toolbar-row">
+        <div class="content-tabs" id="browse-content-tabs">
+          <button class="content-tab active" data-content="logs">Voyage Logs</button>
+          <button class="content-tab" data-content="subtitles">Quest Subtitles</button>
+          <button class="content-tab" data-content="sampledata">Sample Data</button>
+        </div>
+        <label class="control" id="version-control">
+          <span>Version</span>
+          <select id="browse-version"></select>
+        </label>
+      </div>
+      <div class="content-tabs hidden" id="sampledata-content-tabs">
+        <button class="content-tab active" data-content="all">All</button>
+        <button class="content-tab" data-content="field">Hologram</button>
+        <button class="content-tab" data-content="cave">Painting</button>
+      </div>
+    </div>
+
+    <div class="toolbar-controls hidden" id="compare-controls">
+      <div class="toolbar-row">
+        <label class="control">
+          <span>From</span>
+          <select id="compare-from"></select>
+        </label>
+        <label class="control">
+          <span>To</span>
+          <select id="compare-to"></select>
+        </label>
+      </div>
+      <div class="content-tabs" id="compare-content-tabs">
+        <button class="content-tab active" data-content="logs">Voyage Logs</button>
+        <button class="content-tab" data-content="subtitles">Quest Subtitles</button>
+        <button class="content-tab" data-content="sampledata">Sample Data</button>
+      </div>
+    </div>
+
+  </div>
+
+  <section id="panel-browse" class="panel active">
+    <div class="screens">
+      <div class="screen list-screen">
+        <div class="screen-title-row">
+          <div class="screen-title" id="list-screen-title">DATA LOGS</div>
+          <span class="list-count" id="list-count"></span>
+        </div>
+        <div class="screen-scroll">
+          <div id="logs-list" class="entry-list"></div>
+          <div id="subs-list" class="entry-list hidden"></div>
+          <div id="sampledata-list" class="entry-list hidden"></div>
+        </div>
+      </div>
+      <div class="screen detail-screen">
+        <div class="screen-scroll">
+          <div id="detail-pane" class="detail-pane">
+            <p class="empty-note">Select an entry from the list.</p>
+          </div>
+          <div id="sampledata-detail-pane" class="detail-pane hidden">
+            <p class="empty-note">Select a record from the list.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="panel-compare" class="panel">
+    <div class="screens single">
+      <div class="screen detail-screen wide">
+        <div class="screen-title">COMPARE — <span id="compare-scope-label">VOYAGE LOGS</span></div>
+        <div class="screen-scroll">
+          <div id="compare-logs" class="content-view active"></div>
+          <div id="compare-subtitles" class="content-view"></div>
+          <div id="compare-sampledata" class="content-view"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="status" class="status hidden"></div>
+
+  <div class="control-strip">
+    <div class="control-block">
+      <div class="control-block-label">DISPLAY</div>
+      <div class="control-grid">
+        <button class="device-btn" type="button" data-action="brt-up">BRT +</button>
+        <button class="device-btn" type="button" data-action="con-up">CON +</button>
+        <button class="device-btn" type="button" data-action="sat-up">SAT +</button>
+        <button class="device-btn" type="button" data-action="brt-down">BRT -</button>
+        <button class="device-btn" type="button" data-action="con-down">CON -</button>
+        <button class="device-btn" type="button" data-action="sat-down">SAT -</button>
+      </div>
+    </div>
+
+    <div class="control-center">
+      <button class="device-btn disp-btn" type="button" id="disp-toggle">DISP ON</button>
+      <div class="led" id="status-led"></div>
+    </div>
+
+    <div class="control-block">
+      <div class="control-block-label">SETTINGS</div>
+      <div class="control-grid">
+        <button class="device-btn" type="button" id="btn-exe">EXE</button>
+        <button class="device-btn" type="button" id="btn-up">UP</button>
+        <button class="device-btn" type="button" id="btn-exit">EXIT</button>
+        <button class="device-btn" type="button" id="btn-prev">PREV</button>
+        <button class="device-btn" type="button" id="btn-down">DOWN</button>
+        <button class="device-btn" type="button" id="btn-next">NEXT</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="terminal-bar" id="terminal-bar">
+    <span class="terminal-prompt">user@archive:~$</span>
+    <input type="search" id="filter-input" class="terminal-input" placeholder="type to filter…" autocomplete="off">
+  </div>
+
+</div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/diff@5.2.0/dist/diff.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
