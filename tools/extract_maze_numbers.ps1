@@ -52,17 +52,19 @@ $maze_room_data = @{
 # ---------------------------------------------------------------------------
 # 1. Find and load JSON data files
 # ---------------------------------------------------------------------------
-if (-not (Test-Path $DataPath)) {
-    Write-Error "Data path not found: $DataPath"
+
+$Path = [System.Environment]::ExpandEnvironmentVariables($DataPath)
+if (-not (Test-Path $Path)) {
+    Write-Error "Data path not found: $Path"
     exit 1
 }
 
-$jsonFiles = Get-ChildItem -Path $DataPath -Filter "*.json" | Where-Object {
+$jsonFiles = Get-ChildItem -Path $Path -Filter "*.json" | Where-Object {
     $_.Name -match "^(5TF|BTN)"
 }
 
 if ($jsonFiles.Count -eq 0) {
-    Write-Error "No 5TF*.json or BTN*.json files found in: $DataPath"
+    Write-Error "No 5TF*.json or BTN*.json files found in: $Path"
     exit 1
 }
 
