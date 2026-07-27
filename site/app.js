@@ -35,12 +35,19 @@ let browseScope = "logs"; // "logs" | "subtitles" | "sampledata"
 let compareScope = "logs"; // "logs" | "subtitles" | "sampledata"
 let selectedLogIdx = -1;
 let selectedSubIdx = -1; // indexes filteredSubGroups
+let selectedLogKey = null;
+let selectedSubKey = null;
 
 let sampleData = []; // reloaded per-version by loadBrowseVersion(), like currentBrowseLogs/Subs
 let filteredSamples = [];
 let sampleScope = "all"; // "all" | "field" | "cave"
 let selectedSampleIdx = -1;
+let selectedSampleKey = null;
 const unlockedSamples = new Set();
+
+let activeSelectionContext = null;
+
+let isApplyingHashState = false;
 
 let displayOn = true;
 let brt = 100, con = 100, sat = 100;
@@ -64,6 +71,378 @@ function formatDate(iso) {
 function firstLine(msg) {
   const line = (msg || "").split("\n")[0];
   return line.length > 70 ? line.slice(0, 67) + "…" : line;
+}
+
+function currentFilterValue() {
+  return document.getElementById("filter-input")?.value || "";
+}
+
+function normalizeSelectedText(text) {
+  return String(text || "").replace(/\s+/g, " ").trim();
+}
+
+function trimmedSelectionText(text) {
+  const normalized = normalizeSelectedText(text);
+  return normalized.length > 200 ? `${normalized.slice(0, 197)}…` : normalized;
+}
+
+function hashValue(value) {
+  return value == null ? "" : String(value);
+}
+
+function selectorValue(value) {
+  if (typeof CSS !== "undefined" && typeof CSS.escape === "function") return CSS.escape(String(value));
+  return String(value).replace(/["\\]/g, "\\$&");
+}
+
+function setBrowseModeUi(scope) {
+  const title = document.getElementById("list-screen-title");
+  document.querySelectorAll("#browse-content-tabs .content-tab").forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.content === scope);
+  });
+  document.getElementById("logs-list").classList.toggle("hidden", scope !== "logs");
+  document.getElementById("subs-list").classList.toggle("hidden", scope !== "subtitles");
+  document.getElementById("sampledata-list").classList.toggle("hidden", scope !== "sampledata");
+  document.getElementById("detail-pane").classList.toggle("hidden", scope === "sampledata");
+  document.getElementById("sampledata-detail-pane").classList.toggle("hidden", scope !== "sampledata");
+  document.getElementById("sampledata-content-tabs").classList.toggle("hidden", scope !== "sampledata");
+  title.textContent = SCOPE_TITLES[scope];
+}
+
+function setSampleScopeUi(scope) {
+  document.querySelectorAll("#sampledata-content-tabs .content-tab").forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.content === scope);
+  });
+}
+
+function applyBrowseScope(scope, options = {}) {
+  if (!SCOPE_TITLES[scope]) return;
+  const { resetFilter = true } = options;
+  browseScope = scope;
+  setBrowseModeUi(scope);
+
+  const filterInput = document.getElementById("filter-input");
+  if (resetFilter) filterInput.value = "";
+  filterInput.placeholder = browseScope === "sampledata" ? "type to filter sample data…" : "type to filter…";
+
+  renderBrowseLogs(currentFilterValue());
+  renderBrowseSubs(currentFilterValue());
+  renderSampleList(currentFilterValue());
+  updateCopyLinkButton();
+}
+
+function applySampleScope(scope, options = {}) {
+  if (!["all", "field", "cave"].includes(scope)) return;
+  const { resetFilter = true } = options;
+  sampleScope = scope;
+  setSampleScopeUi(scope);
+  if (resetFilter) document.getElementById("filter-input").value = "";
+  renderSampleList(currentFilterValue());
+}
+
+function currentSelectedEntryKey() {
+  if (browseScope === "logs") return selectedLogKey;
+  if (browseScope === "subtitles") return selectedSubKey;
+  return selectedSampleKey;
+}
+
+function currentSelectedEntry() {
+  if (browseScope === "logs") return filteredLogs[selectedLogIdx] || null;
+  if (browseScope === "subtitles") return filteredSubGroups[selectedSubIdx] || null;
+  return filteredSamples[selectedSampleIdx] || null;
+}
+
+function logPageKey(fragment, index) {
+  return fragment && fragment.id ? `page:${fragment.id}` : `page:${index + 1}`;
+}
+
+function subtitlePageKey(item) {
+  return `part:${item?.Name || ""}`;
+}
+
+function getActiveDetailPane() {
+  return browseScope === "sampledata"
+    ? document.getElementById("sampledata-detail-pane")
+    : document.getElementById("detail-pane");
+}
+
+function shortSha(sha) {
+  return String(sha || "").slice(0, 7);
+}
+
+function resolveVersionSha(version) {
+  if (!version) return "";
+  const exact = versions.find((v) => v.sha === version);
+  if (exact) return exact.sha;
+  const matches = versions.filter((v) => v.sha.startsWith(version));
+  return matches.length === 1 ? matches[0].sha : "";
+}
+
+function buildBrowseHash(extra = {}) {
+  const params = new URLSearchParams();
+  params.set("mode", "browse");
+  params.set("scope", browseScope);
+  if (currentBrowseSha) params.set("version", shortSha(currentBrowseSha));
+  const entryKey = hashValue(currentSelectedEntryKey());
+  if (entryKey) params.set("entry", entryKey);
+  if (browseScope === "sampledata") params.set("sampleScope", sampleScope);
+  if (extra.page) params.set("page", extra.page);
+  if (extra.text) params.set("text", extra.text);
+  if (browseScope === "sampledata" && unlockedSamples.has(entryKey)) params.set("unlocked", "1");
+  return params.toString();
+}
+
+function writeBrowseHash(extra = {}) {
+  if (isApplyingHashState || currentMode !== "browse") return;
+  const hash = buildBrowseHash(extra);
+  const suffix = hash ? `#${hash}` : "";
+  history.replaceState(null, "", `${location.pathname}${location.search}${suffix}`);
+}
+
+function parseBrowseHash() {
+  const raw = location.hash.replace(/^#/, "");
+  if (!raw) return null;
+  const params = new URLSearchParams(raw);
+  if ((params.get("mode") || "browse") !== "browse") return null;
+  const scope = params.get("scope");
+  return {
+    scope: SCOPE_TITLES[scope] ? scope : "logs",
+    version: params.get("version") || "",
+    entry: params.get("entry") || "",
+    page: params.get("page") || "",
+    text: trimmedSelectionText(params.get("text") || ""),
+    sampleScope: params.get("sampleScope") || "all",
+    unlocked: params.get("unlocked") === "1",
+  };
+}
+
+function scrollSelectedEntryIntoView() {
+  if (browseScope === "logs") document.querySelector("#logs-list .entry.selected")?.scrollIntoView({ block: "nearest" });
+  else if (browseScope === "subtitles") document.querySelector("#subs-list .entry.selected")?.scrollIntoView({ block: "nearest" });
+  else document.querySelector("#sampledata-list .entry.selected")?.scrollIntoView({ block: "nearest" });
+}
+
+function clearCopiedSelection() {
+  const selection = window.getSelection();
+  if (selection && typeof selection.removeAllRanges === "function") selection.removeAllRanges();
+}
+
+function findTextNodeMatch(root, snippet) {
+  const needle = normalizeSelectedText(snippet).toLowerCase();
+  if (!root || !needle) return null;
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+  while (walker.nextNode()) {
+    const node = walker.currentNode;
+    const value = node.nodeValue || "";
+    let normalized = "";
+    const rawIndices = [];
+    let pendingSpace = false;
+    for (let i = 0; i < value.length; i++) {
+      const ch = value[i];
+      if (/\s/.test(ch)) {
+        pendingSpace = normalized.length > 0;
+        continue;
+      }
+      if (pendingSpace) {
+        normalized += " ";
+        rawIndices.push(i);
+        pendingSpace = false;
+      }
+      normalized += ch;
+      rawIndices.push(i);
+    }
+    normalized = normalized.toLowerCase();
+    const idx = normalized.indexOf(needle);
+    if (idx === -1) continue;
+    const rawStart = rawIndices[idx];
+    const rawEnd = rawIndices[idx + needle.length - 1];
+    if (rawStart != null && rawEnd != null) return { node, start: rawStart, end: rawEnd + 1 };
+  }
+  return null;
+}
+
+function clearLinkedTextMarks(root) {
+  if (!root) return;
+  root.querySelectorAll("mark.link-mark").forEach((mark) => {
+    const parent = mark.parentNode;
+    if (!parent) return;
+    while (mark.firstChild) parent.insertBefore(mark.firstChild, mark);
+    parent.removeChild(mark);
+    parent.normalize();
+  });
+}
+
+function highlightLinkedText(root, text) {
+  clearLinkedTextMarks(root);
+  const match = findTextNodeMatch(root, text);
+  if (!match) return false;
+  const range = document.createRange();
+  range.setStart(match.node, match.start);
+  range.setEnd(match.node, match.end);
+  const mark = document.createElement("mark");
+  mark.className = "link-mark";
+  range.surroundContents(mark);
+  mark.scrollIntoView({ block: "center", behavior: "smooth" });
+  return true;
+}
+
+function focusBrowseHashTarget(state) {
+  const pane = getActiveDetailPane();
+  if (!pane) return;
+  let target = pane;
+  if (state.page) {
+    const el = pane.querySelector(`[data-link-page="${selectorValue(state.page)}"]`);
+    if (el) target = el;
+  }
+  target.scrollIntoView({ block: "nearest", behavior: "smooth" });
+  if (state.text) highlightLinkedText(target, state.text) || highlightLinkedText(pane, state.text);
+}
+
+function getDetailSelectionContext() {
+  if (currentMode !== "browse") return null;
+  const pane = getActiveDetailPane();
+  const selection = window.getSelection();
+  if (!pane || !selection || selection.rangeCount === 0 || selection.isCollapsed) return null;
+  const range = selection.getRangeAt(0);
+  const container = range.commonAncestorContainer.nodeType === Node.ELEMENT_NODE
+    ? range.commonAncestorContainer
+    : range.commonAncestorContainer.parentElement;
+  if (!container || !pane.contains(container)) return null;
+
+  const text = trimmedSelectionText(selection.toString());
+  if (!text) return null;
+  const pageEl = container.closest("[data-link-page]");
+  return {
+    page: pageEl?.dataset.linkPage || "",
+    text,
+  };
+}
+
+function browseShareUrl(extra = {}) {
+  const hash = buildBrowseHash(extra);
+  return `${location.origin}${location.pathname}${location.search}#${hash}`;
+}
+
+function currentEntryShareUrl() {
+  return browseShareUrl();
+}
+
+function currentSelectionShareUrl() {
+  return browseShareUrl(activeSelectionContext || getDetailSelectionContext() || {});
+}
+
+async function copyText(text) {
+  if (navigator.clipboard?.writeText) {
+    await navigator.clipboard.writeText(text);
+    return;
+  }
+  const input = document.createElement("textarea");
+  input.value = text;
+  input.setAttribute("readonly", "readonly");
+  input.style.position = "absolute";
+  input.style.left = "-9999px";
+  document.body.appendChild(input);
+  input.select();
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}
+
+function updateCopyLinkButton() {
+  const btn = document.getElementById("copy-link-btn");
+  if (!btn) return;
+  const entryKey = currentSelectedEntryKey();
+  btn.disabled = currentMode !== "browse" || !entryKey;
+  btn.textContent = "COPY ENTRY LINK";
+}
+
+function hideSelectionLinkButton() {
+  activeSelectionContext = null;
+  document.getElementById("selection-link-btn")?.classList.add("hidden");
+}
+
+function selectionButtonRect(range) {
+  const rects = Array.from(range.getClientRects());
+  return rects[rects.length - 1] || range.getBoundingClientRect();
+}
+
+function clamp(value, min, max) {
+  return Math.min(max, Math.max(min, value));
+}
+
+function updateSelectionLinkButton() {
+  const btn = document.getElementById("selection-link-btn");
+  if (!btn) return;
+  const selection = window.getSelection();
+  const context = getDetailSelectionContext();
+  if (currentMode !== "browse" || !context || !selection || selection.rangeCount === 0) {
+    hideSelectionLinkButton();
+    return;
+  }
+
+  activeSelectionContext = context;
+  const rect = selectionButtonRect(selection.getRangeAt(0));
+  if (!rect || (!rect.width && !rect.height)) {
+    hideSelectionLinkButton();
+    return;
+  }
+
+  btn.classList.remove("hidden");
+  const margin = 10;
+  const width = btn.offsetWidth;
+  const height = btn.offsetHeight;
+  const left = clamp(rect.right - width / 2, margin, window.innerWidth - width - margin);
+  const top = clamp(rect.bottom + 8, margin, window.innerHeight - height - margin);
+  btn.style.left = `${left}px`;
+  btn.style.top = `${top}px`;
+}
+
+function syncBrowseSelectionHash() {
+  writeBrowseHash();
+  updateCopyLinkButton();
+  updateSelectionLinkButton();
+}
+
+function selectBrowseEntryByKey(scope, key) {
+  if (!key) return false;
+  if (scope === "logs") {
+    selectedLogKey = key;
+    renderBrowseLogs(currentFilterValue());
+    return !!filteredLogs[selectedLogIdx] && filteredLogs[selectedLogIdx].id === key;
+  }
+  if (scope === "subtitles") {
+    selectedSubKey = key;
+    renderBrowseSubs(currentFilterValue());
+    return !!filteredSubGroups[selectedSubIdx] && filteredSubGroups[selectedSubIdx].key === key;
+  }
+  selectedSampleKey = key;
+  renderSampleList(currentFilterValue());
+  return !!filteredSamples[selectedSampleIdx] && filteredSamples[selectedSampleIdx].id === key;
+}
+
+async function applyBrowseHashState() {
+  const state = parseBrowseHash();
+  if (!state) return false;
+
+  isApplyingHashState = true;
+  try {
+    setMode("browse");
+    applyBrowseScope(state.scope, { resetFilter: true });
+    if (state.scope === "sampledata") applySampleScope(state.sampleScope, { resetFilter: false });
+
+    const browseSelect = document.getElementById("browse-version");
+  const version = resolveVersionSha(state.version) || browseSelect.value;
+    if (browseSelect.value !== version) browseSelect.value = version;
+    if (currentBrowseSha !== version) await loadBrowseVersion(version);
+
+    if (state.scope === "sampledata" && state.unlocked && state.entry) unlockedSamples.add(state.entry);
+    if (state.entry) selectBrowseEntryByKey(state.scope, state.entry);
+    scrollSelectedEntryIntoView();
+    if (state.page || state.text) requestAnimationFrame(() => focusBrowseHashTarget(state));
+    updateCopyLinkButton();
+    return true;
+  } finally {
+    isApplyingHashState = false;
+  }
 }
 
 function setStatus(text, isError) {
@@ -221,8 +600,13 @@ function renderBrowseLogs(filterText) {
   filteredLogs = currentBrowseLogs.filter(
     (l) => !term || (l.title || "").toLowerCase().includes(term) || (l.id || "").toLowerCase().includes(term)
   );
+  if (selectedLogKey) {
+    const matchIdx = filteredLogs.findIndex((l) => l.id === selectedLogKey);
+    if (matchIdx !== -1) selectedLogIdx = matchIdx;
+  }
   if (selectedLogIdx >= filteredLogs.length) selectedLogIdx = filteredLogs.length ? 0 : -1;
   if (selectedLogIdx === -1 && filteredLogs.length) selectedLogIdx = 0;
+  selectedLogKey = filteredLogs[selectedLogIdx]?.id || null;
 
   const container = document.getElementById("logs-list");
   container.innerHTML = filteredLogs.length
@@ -237,6 +621,7 @@ function renderBrowseLogs(filterText) {
   if (browseScope === "logs") {
     document.getElementById("list-count").textContent = `${filteredLogs.length}/${currentBrowseLogs.length}`;
     renderDetail();
+    syncBrowseSelectionHash();
   }
 }
 
@@ -250,8 +635,13 @@ function renderBrowseSubs(filterText) {
           g.key.toLowerCase().includes(term) ||
           g.items.some((s) => (s.Name || "").toLowerCase().includes(term) || (s.Subtitle || "").toLowerCase().includes(term))
       );
+  if (selectedSubKey) {
+    const matchIdx = filteredSubGroups.findIndex((g) => g.key === selectedSubKey);
+    if (matchIdx !== -1) selectedSubIdx = matchIdx;
+  }
   if (selectedSubIdx >= filteredSubGroups.length) selectedSubIdx = filteredSubGroups.length ? 0 : -1;
   if (selectedSubIdx === -1 && filteredSubGroups.length) selectedSubIdx = 0;
+  selectedSubKey = filteredSubGroups[selectedSubIdx]?.key || null;
 
   const container = document.getElementById("subs-list");
   container.innerHTML = filteredSubGroups.length
@@ -266,6 +656,7 @@ function renderBrowseSubs(filterText) {
   if (browseScope === "subtitles") {
     document.getElementById("list-count").textContent = `${filteredSubGroups.length}/${groups.length}`;
     renderDetail();
+    syncBrowseSelectionHash();
   }
 }
 
@@ -280,7 +671,7 @@ function renderLogDetail() {
   }
   const fragments = (log.fragments || [])
     .map(
-      (f) => `<div class="fragment">
+      (f, index) => `<div class="fragment" data-link-page="${escapeHtml(logPageKey(f, index))}">
         <div class="fragment-title">${escapeHtml(f.title)}</div>
         <p>${escapeHtml(f.description)}</p>
       </div>`
@@ -289,9 +680,9 @@ function renderLogDetail() {
   pane.innerHTML = `
     <div class="detail-head-1">${escapeHtml(log.title) || "(untitled)"} ${selectedLogIdx + 1}/${filteredLogs.length}</div>
     <div class="detail-head-2">${escapeHtml(log.id)}</div>
-    ${log.description ? `<p class="detail-intro">${escapeHtml(log.description)}</p>` : ""}
+    ${log.description ? `<p class="detail-intro" data-link-page="intro">${escapeHtml(log.description)}</p>` : ""}
     ${fragments}
-    ${log.footer ? `<p class="footer-text">${escapeHtml(log.footer)}</p>` : ""}
+    ${log.footer ? `<p class="footer-text" data-link-page="footer">${escapeHtml(log.footer)}</p>` : ""}
   `;
 }
 
@@ -304,7 +695,7 @@ function renderSubDetail() {
   }
   const lines = group.items
     .map(
-      (s) => `<div class="fragment">
+      (s) => `<div class="fragment" data-link-page="${escapeHtml(subtitlePageKey(s))}">
         <div class="fragment-title">Part ${escapeHtml(subtitlePartLabel(s.Name)) || "?"} <span class="muted">${formatDuration(s.Duration)}</span></div>
         <p>${escapeHtml(s.Subtitle)}</p>
       </div>`
@@ -354,10 +745,13 @@ async function loadBrowseVersion(sha) {
     selectedLogIdx = -1;
     selectedSubIdx = -1;
     selectedSampleIdx = -1;
+    selectedLogKey = null;
+    selectedSubKey = null;
+    selectedSampleKey = null;
 
-    renderBrowseLogs(document.getElementById("filter-input").value);
-    renderBrowseSubs(document.getElementById("filter-input").value);
-    renderSampleList(document.getElementById("filter-input").value);
+    renderBrowseLogs(currentFilterValue());
+    renderBrowseSubs(currentFilterValue());
+    renderSampleList(currentFilterValue());
     setStatus("");
   } catch (err) {
     console.error(err);
@@ -394,8 +788,13 @@ function renderSampleList(filterText) {
     const matchesTerm = !term || hay.includes(term);
     return matchesScope && matchesTerm;
   });
+  if (selectedSampleKey) {
+    const matchIdx = filteredSamples.findIndex((it) => it.id === selectedSampleKey);
+    if (matchIdx !== -1) selectedSampleIdx = matchIdx;
+  }
   if (selectedSampleIdx >= filteredSamples.length) selectedSampleIdx = filteredSamples.length ? 0 : -1;
   if (selectedSampleIdx === -1 && filteredSamples.length) selectedSampleIdx = 0;
+  selectedSampleKey = filteredSamples[selectedSampleIdx]?.id || null;
 
   const container = document.getElementById("sampledata-list");
   container.innerHTML = filteredSamples.length
@@ -407,6 +806,7 @@ function renderSampleList(filterText) {
   if (browseScope === "sampledata") {
     document.getElementById("list-count").textContent = `${filteredSamples.length}/${sampleData.length}`;
     renderSampleDetail();
+    syncBrowseSelectionHash();
   }
 }
 
@@ -454,7 +854,7 @@ function renderSampleDetail() {
     <div class="detail-head-2">${sampleCode(it)} · ${escapeHtml(sampleSiteLabel(it))}</div>
     ${media}
     <div class="section-label">Field reading</div>
-    <p>${escapeHtml(it.short)}</p>
+    <p data-link-page="field-reading">${escapeHtml(it.short)}</p>
     ${lockHtml}
   `;
 
@@ -479,6 +879,7 @@ function unlockSample(id) {
   if (!it || !it.unlock) return;
   unlockedSamples.add(id);
   renderSampleDetail();
+  syncBrowseSelectionHash();
 }
 
 // ---------- diffing ----------
@@ -722,6 +1123,7 @@ function setMode(mode) {
     terminalBar.classList.remove("disabled");
     filterInput.placeholder = browseScope === "sampledata" ? "type to filter sample data…" : "type to filter…";
   }
+  updateCopyLinkButton();
   if (currentMode === "compare") loadCompare();
 }
 
@@ -730,28 +1132,9 @@ const COMPARE_SCOPE_TITLES = { logs: "VOYAGE LOGS", subtitles: "QUEST SUBTITLES"
 
 function wireBrowseContentTabs() {
   const buttons = document.querySelectorAll("#browse-content-tabs .content-tab");
-  const title = document.getElementById("list-screen-title");
   buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
-      buttons.forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-      browseScope = btn.dataset.content;
-
-      document.getElementById("logs-list").classList.toggle("hidden", browseScope !== "logs");
-      document.getElementById("subs-list").classList.toggle("hidden", browseScope !== "subtitles");
-      document.getElementById("sampledata-list").classList.toggle("hidden", browseScope !== "sampledata");
-      document.getElementById("detail-pane").classList.toggle("hidden", browseScope === "sampledata");
-      document.getElementById("sampledata-detail-pane").classList.toggle("hidden", browseScope !== "sampledata");
-      document.getElementById("sampledata-content-tabs").classList.toggle("hidden", browseScope !== "sampledata");
-      title.textContent = SCOPE_TITLES[browseScope];
-
-      const filterInput = document.getElementById("filter-input");
-      filterInput.value = "";
-      filterInput.placeholder = browseScope === "sampledata" ? "type to filter sample data…" : "type to filter…";
-
-      renderBrowseLogs("");
-      renderBrowseSubs("");
-      renderSampleList("");
+      applyBrowseScope(btn.dataset.content, { resetFilter: true });
     });
   });
 }
@@ -776,11 +1159,7 @@ function wireSampleContentTabs() {
   const buttons = document.querySelectorAll("#sampledata-content-tabs .content-tab");
   buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
-      buttons.forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-      sampleScope = btn.dataset.content;
-      document.getElementById("filter-input").value = "";
-      renderSampleList("");
+      applySampleScope(btn.dataset.content, { resetFilter: true });
     });
   });
 }
@@ -790,19 +1169,22 @@ function wireEntryListClicks() {
     const row = e.target.closest(".entry");
     if (!row) return;
     selectedLogIdx = Number(row.dataset.idx);
-    renderBrowseLogs(document.getElementById("filter-input").value);
+    selectedLogKey = filteredLogs[selectedLogIdx]?.id || null;
+    renderBrowseLogs(currentFilterValue());
   });
   document.getElementById("subs-list").addEventListener("click", (e) => {
     const row = e.target.closest(".entry");
     if (!row) return;
     selectedSubIdx = Number(row.dataset.idx);
-    renderBrowseSubs(document.getElementById("filter-input").value);
+    selectedSubKey = filteredSubGroups[selectedSubIdx]?.key || null;
+    renderBrowseSubs(currentFilterValue());
   });
   document.getElementById("sampledata-list").addEventListener("click", (e) => {
     const row = e.target.closest(".entry");
     if (!row) return;
     selectedSampleIdx = Number(row.dataset.idx);
-    renderSampleList(document.getElementById("filter-input").value);
+    selectedSampleKey = filteredSamples[selectedSampleIdx]?.id || null;
+    renderSampleList(currentFilterValue());
   });
 }
 
@@ -815,6 +1197,41 @@ function wireFilterInput() {
   });
 }
 
+function wireShareLinkButton() {
+  document.getElementById("copy-link-btn").addEventListener("click", async () => {
+    if (currentMode !== "browse" || !currentSelectedEntryKey()) return;
+    try {
+      await copyText(currentEntryShareUrl());
+      setStatus("Entry link copied.");
+      window.setTimeout(() => setStatus(""), 1500);
+    } catch (err) {
+      console.error(err);
+      setStatus("Could not copy link.", true);
+    }
+  });
+
+  const selectionBtn = document.getElementById("selection-link-btn");
+  selectionBtn.addEventListener("mousedown", (e) => e.preventDefault());
+  selectionBtn.addEventListener("click", async () => {
+    if (!activeSelectionContext) return;
+    try {
+      await copyText(currentSelectionShareUrl());
+      setStatus("Selection link copied.");
+      window.setTimeout(() => setStatus(""), 1500);
+    } catch (err) {
+      console.error(err);
+      setStatus("Could not copy link.", true);
+    }
+  });
+
+  document.addEventListener("selectionchange", () => {
+    updateCopyLinkButton();
+    updateSelectionLinkButton();
+  });
+  window.addEventListener("scroll", updateSelectionLinkButton, true);
+  window.addEventListener("resize", updateSelectionLinkButton);
+}
+
 // ---------- device controls ----------
 
 function moveSelection(delta) {
@@ -822,18 +1239,21 @@ function moveSelection(delta) {
   if (browseScope === "logs") {
     if (!filteredLogs.length) return;
     selectedLogIdx = (selectedLogIdx + delta + filteredLogs.length) % filteredLogs.length;
-    renderBrowseLogs(document.getElementById("filter-input").value);
-    document.querySelector("#logs-list .entry.selected")?.scrollIntoView({ block: "nearest" });
+    selectedLogKey = filteredLogs[selectedLogIdx]?.id || null;
+    renderBrowseLogs(currentFilterValue());
+    scrollSelectedEntryIntoView();
   } else if (browseScope === "subtitles") {
     if (!filteredSubGroups.length) return;
     selectedSubIdx = (selectedSubIdx + delta + filteredSubGroups.length) % filteredSubGroups.length;
-    renderBrowseSubs(document.getElementById("filter-input").value);
-    document.querySelector("#subs-list .entry.selected")?.scrollIntoView({ block: "nearest" });
+    selectedSubKey = filteredSubGroups[selectedSubIdx]?.key || null;
+    renderBrowseSubs(currentFilterValue());
+    scrollSelectedEntryIntoView();
   } else {
     if (!filteredSamples.length) return;
     selectedSampleIdx = (selectedSampleIdx + delta + filteredSamples.length) % filteredSamples.length;
-    renderSampleList(document.getElementById("filter-input").value);
-    document.querySelector("#sampledata-list .entry.selected")?.scrollIntoView({ block: "nearest" });
+    selectedSampleKey = filteredSamples[selectedSampleIdx]?.id || null;
+    renderSampleList(currentFilterValue());
+    scrollSelectedEntryIntoView();
   }
 }
 
@@ -883,6 +1303,8 @@ function wireDeviceControls() {
     const input = document.getElementById("filter-input");
     input.value = "";
     input.blur();
+    clearCopiedSelection();
+    hideSelectionLinkButton();
     if (currentMode !== "browse") return;
     if (browseScope === "logs") renderBrowseLogs("");
     else if (browseScope === "subtitles") renderBrowseSubs("");
@@ -935,6 +1357,7 @@ async function init() {
   wireSampleContentTabs();
   wireEntryListClicks();
   wireFilterInput();
+  wireShareLinkButton();
   wireDeviceControls();
 
   setStatus("Loading commit history…");
@@ -952,8 +1375,16 @@ async function init() {
   document.getElementById("browse-version").addEventListener("change", (e) => loadBrowseVersion(e.target.value));
   document.getElementById("compare-from").addEventListener("change", loadCompare);
   document.getElementById("compare-to").addEventListener("change", loadCompare);
+  window.addEventListener("hashchange", () => {
+    applyBrowseHashState().catch((err) => {
+      console.error(err);
+      setStatus(err.message, true);
+    });
+  });
 
-  await loadBrowseVersion(document.getElementById("browse-version").value);
+  if (!(await applyBrowseHashState())) {
+    await loadBrowseVersion(document.getElementById("browse-version").value);
+  }
 }
 
 document.addEventListener("DOMContentLoaded", init);
