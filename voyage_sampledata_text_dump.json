@@ -1,5 +1,29 @@
 [
   {
+    "id": "DA_SampleData_01",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "A parent teaches a child how to wave goodbye before the child understands what goodbye means. The rocket won't return though, so this is actually abandonment disguised as ritual."
+  },
+  {
+    "id": "DA_SampleData_02",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "This is a tragic moment of selection during the Exodus, showing when a family got rifted into two. The MOSES official chose only one child for evacuation; the other child and the mother were left behind. The grieving parent must obey before the opportunity is lost."
+  },
+  {
+    "id": "DA_SampleData_03",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "Usually, a toy indicates the presence of a nearby child. In this case, it means the child isn't coming back. The MOSES worker hands it to the father, and the father realizes the significance before he even touches it. Without the child, the toy holds no hope within it."
+  },
+  {
+    "id": "DA_SampleData_04",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "The worst part is not the deceased body. It's the waiting for someone in authority to notice and arrive. The teenager no longer calls for help because help has already failed to come. The quiet of the room reflects the desolation and hopelessness felt in the spirit."
+  },
+  {
     "id": "DA_SampleData_13",
     "title": "Hidden",
     "uncollectedDescription": "No peeking",
@@ -36,6 +60,18 @@
     "sentDescription": "This is housing reduced to allocation. A number on a steel door becomes kitchen, bedroom, shelter, and future. The MOSES official only needs to point. The family has no choice but accept the decision."
   },
   {
+    "id": "DA_SampleData_19",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "He already knows no one is coming. The second tray doesn't symbolize hope anymore. Instead, placing the second meal is a habit that refuses to die. Sometimes, grief doesn't cry or shout out. Sometimes, it arranges an extra meal because stopping would admit the person is gone forever."
+  },
+  {
+    "id": "DA_SampleData_20",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "They're sharing a meal inside a shrinking circle of light, acting out the shape of an ordinary family evening. The meal doesn't just involve food. It's a form of resistance against the collapse. If they sit close enough together and comfort each other, then maybe the room can still feel like a home for one more night."
+  },
+  {
     "id": "DA_SampleData_21",
     "title": "Hidden",
     "uncollectedDescription": "No peeking",
@@ -66,16 +102,52 @@
     "sentDescription": "Nobody is doing anything here. They're all waiting, and that's the point. The whole day has been reduced to the narrow hope that one machine will start working again. Every bucket in that line is a reminder that thirst never feels dramatic in the beginning. It's a growing presence that waits alongside you and never leaves."
   },
   {
+    "id": "DA_SampleData_26",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "The child isn't helping because there's nothing useful left to do. They're all waiting to find out whether fresh water is still possible. The machine has grown too important, more important than dignity, conversation, or even fear. When it stops, the whole room is forced to revolve around it."
+  },
+  {
     "id": "DA_SampleData_27",
     "title": "Hidden",
     "uncollectedDescription": "No peeking",
     "sentDescription": "There's no correct way to divide an insufficient amount of food. The adult isn't solving the hunger problem, only choosing how best to avoid disappointing either child. She anguishes over the choice, but she still makes it with great care. Even love is forced to become arithmetic when survival is at stake because numbers never forgive."
   },
   {
+    "id": "DA_SampleData_28",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "This scene doesn't depict abundance. These people are negotiating with the sea. They lean back together because no single person can pull the net up. Hope grows heavier when it comes in the form of a wet net holding unknown contents. The ocean keeps them alive, but never gives them enough to let them stop."
+  },
+  {
     "id": "DA_SampleData_29",
     "title": "Hidden",
     "uncollectedDescription": "No peeking",
     "sentDescription": "Their hydroponics tray is quite small, but both people act like it contains their entire future. The person holding the light isn't trying make the plants more visible. They're using it as a makeshift grow light. They're desperately trying to ensure that food can still grow under human care. A tiny garden becomes enormous when all other gardens have failed."
+  },
+  {
+    "id": "DA_SampleData_30",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "When civilization's systems are healthy, electricity is invisible. Here, it's something you must drag by hand. The cable is heavy, awkward, and ugly, but that's what survival looks like after all the elegant solutions are gone. They're not working to restore comfort. They're physically forcing light back into a place that the darkness has already claimed."
+  },
+  {
+    "id": "DA_SampleData_31",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "They're not repairing the room. They're buying time. One pair of hands holds a jerry-rigged seal in place while the other tries to make tape, cloth, and plastic into something reliable. This is what shelter becomes at the end of the world. Safety is a leak that's been slowed down by people with nowhere else to go."
+  },
+  {
+    "id": "DA_SampleData_32",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "That \"table\" is actually a crate. The room is a container. The light is barely adequate for them to see each other. Still, they sit together because that's how humans turn a shipping container into a home for one more night. The meal is small, but the circle matters more. It enables them to sit together, and helps them remember that they're still human."
+  },
+  {
+    "id": "DA_SampleData_33",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "The thermal blanket is too small for all three of them, but they already know that. They've already calculated each person's share. Warmth has become something humans have to divide like food. The child receives the greatest share, but they still try to wrap it around everyone anyway."
   },
   {
     "id": "DA_SampleData_34",
@@ -88,6 +160,36 @@
     "title": "Hidden",
     "uncollectedDescription": "No peeking",
     "sentDescription": "This family lived trapped in a place meant to be temporary. Yet, their child kept growing anyway. So, they marked the growth milestones on the wall, because growth is a kind of defiance against despair. The world continued to narrow into a terrible place of waiting, shortages, and fear. Yet, the child still grew taller. Someone needed to notice that."
+  },
+  {
+    "id": "DA_SampleData_36",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "The food is a ration cake, but it's too small be considered a true cake in the proper sense. The flame is weak, but it's the best they could do to serve as a birthday candle. None of it matters. For a moment, they forced the day to become a birthday, not another day of collapse. Adults do this for children. They build a ceremony out of almost nothing and pray the children can feel happy for a little while longer."
+  },
+  {
+    "id": "DA_SampleData_37",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "This is one of the bravest things humans do. Even after all systems fail, someone still stands in front of children and declares, \"Pay attention, please. This still matters.\" The room is wrong. The furniture is wrong. The future is uncertain. Yet, teaching continues. Civilization shrinks, but refuses to disappear."
+  },
+  {
+    "id": "DA_SampleData_38",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "When too many people have gone missing, their memory has to be posted publicly. The wall becomes a message board, a registry, an obituary, and hope... all rolled into one. Humans stand in front of it and search for names they're afraid to both find and not find."
+  },
+  {
+    "id": "DA_SampleData_39",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "No hospital awaits that poor soul at the end of the corridor. The truth is they're carrying sickness through a place already full of fear, noise, and too many bodies. Yet, they still move the person carefully. Even when there's nowhere suitable to carry the sick, humans try anyway."
+  },
+  {
+    "id": "DA_SampleData_40",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "It's not contemplation but hesitation. The question they face is simple and terrible: use the light now or save it for worse later. That's what the last battery charge means. Light is no longer ordinary. Light has become judgment, argument, and responsibility. Two people sit in front of a small charge and must choose when darkness will be allowed to consume them."
   },
   {
     "id": "DA_SampleData_41",
@@ -108,6 +210,12 @@
     "sentDescription": "These people are waving to a passing boat. This is the moment rescue becomes visible, but still doesn't arrive. That may be worse than never seeing it at all. The people wave because they believe the boat hasn't noticed them. It has. But, they keep waving because accepting that truth would mean the end of hope."
   },
   {
+    "id": "DA_SampleData_44",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "Those items have no useful purpose. They don't feed anyone, seal leaks, or generate power. Still, they're kept with the utmost care. That's what matters here. When the world strips life down to water, heat, and rations, humans will still build a sacred place for memory because forgetting is another kind of death."
+  },
+  {
     "id": "DA_SampleData_45",
     "title": "Hidden",
     "uncollectedDescription": "No peeking",
@@ -118,6 +226,12 @@
     "title": "Hidden",
     "uncollectedDescription": "No peeking",
     "sentDescription": "The screen is dead, but the person keeps a hand there anyway. Humans do this when a connection is gone but their muscle memory still remembers where it used to be. Touch becomes the last message. Not sent, not received, but held in place because letting go makes the silence total and complete."
+  },
+  {
+    "id": "DA_SampleData_47",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "They're sleeping where the machine leaks warmth. That's not comfort. It's survival finding the smallest mercy left in their environment. When rooms stop serving as shelter, people curl beside pipes, engines, and machines that were never meant to be kind, only useful."
   },
   {
     "id": "DA_SampleData_50",
@@ -190,6 +304,12 @@
     "title": "Hidden",
     "uncollectedDescription": "No peeking",
     "sentDescription": "The rooftop isn't their home, but it's the last part of their home still above water. They rescued the dog because love isn't practical. Unfortunately, the rest of the world is coldly practical. So, this family waits together on top of the highest piece of what used to be theirs, trying to make the area comfortable as they wait for a rescue that never comes."
+  },
+  {
+    "id": "DA_SampleData_86",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "The road promised safety until everyone needed it at the same time. Then, it became a gathering of failed escapes. Cars lost their purpose, forcing bags to be carried in exhausted hands. The people stare forward because turning back would admit there's no direction left to go. A traffic jam is an ordinary occurrence until it becomes the place where a plan dies."
   },
   {
     "id": "DA_SampleData_87",
@@ -270,10 +390,112 @@
     "sentDescription": "Keys symbolize an eventual return. Here, they mean the opposite. One person is giving away a home, a room, a duty, or a life they can no longer keep. There's no ceremony for this kind of ending. Just a small piece of metal pressed into another person's hand. The former owner turns away before they can feel anything."
   },
   {
+    "id": "DA_SampleData_100",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "The guardian isn't calculating their own comfort. The blanket must cover the children because care moves faster than thought. Grown-ups can tolerate cold while children get a small border between themselves and the world. The thermal protection isn't enough for all three, but it's all they have."
+  },
+  {
+    "id": "DA_SampleData_101",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "Sometimes, a body understands a situation before the mind can verbalize it.  Small things can carry terrible authority when it once belonged to someone missing. A photo, a shoe, or a toy... the reaching hand already knows the significance, but it moves slowly because taking the object in hand makes the knowing certain."
+  },
+  {
+    "id": "DA_SampleData_102",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "The teacher is no longer teaching. The real lesson now is to stay low and stay quiet. The classroom holds children, but no longer holds childhood. The teacher stands as a wall between danger and the small lives within."
+  },
+  {
+    "id": "DA_SampleData_103",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "They know the game doesn't matter, and that's exactly why it does matter. Playing a game of cards gives the hands something to do, gives the eyes somewhere to look, and gives a reason for the room not to collapse into despair. For at least a few minutes, they can bluff, laugh, lose, win, and play a game whose next round is guaranteed."
+  },
+  {
     "id": "DA_SampleData_104",
     "title": "Hidden",
     "uncollectedDescription": "No peeking",
     "sentDescription": "They sit the way people usually sit when a bus runs late. Unknown to them, the city has stopped keeping its promises. By habit, they still know how to wait inside a working system. Bags on laps. Eyes searching in anticipation. Hope reduced to the waiting posture of public transport passengers."
+  },
+  {
+    "id": "DA_SampleData_105",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "The transit schedule is still readable, which makes the lie worse. The parent points because the child is asking the universal question, \"How much longer?\" But, the dying world left behind many official-looking answers that no longer apply. The schedule survived; the city that posted it didn't."
+  },
+  {
+    "id": "DA_SampleData_106",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "That person still lives in their home, but only by a thread. The bags are packed. The door is open. The home is almost past tense. This is the final moment that leaving feels like a choice instead of a wound."
+  },
+  {
+    "id": "DA_SampleData_107",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "The road is empty, but they still stop to look both ways. That's how deeply the old rules ingrained themselves. Hold the hand of an adult and wait until it's safe to cross. The world no longer obeys those rules, but the adult keeps them for the sake of the child. Sometimes, a semblance of order is the last kindness that can be given."
+  },
+  {
+    "id": "DA_SampleData_108",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "Their suitcase failed at the worst moment. Suddenly, all the precious items they tried to save are lost all over again. One person believes they can still gather up the past one item at a time. The other person knows a delay here means their future could be lost."
+  },
+  {
+    "id": "DA_SampleData_109",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "The stroller sits empty, but the instinct to protect it is hard to ignore. The parents lift the stroller together because the memory of care infuses their being. They know the stroller is empty, but they're not ready to accept it. So, the stroller is still precious to them, and they might carry it to the ends of the Earth."
+  },
+  {
+    "id": "DA_SampleData_110",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "A prescription is supposed to authorize the pharmacy to dispense medicine to the assigned person. It's a message that only the old system understood. A prescription used to be a promise: go here, receive this, get better. Now it's only a piece of hope held in a que that may not even move at all. Receiving medicine has become chance, and chance isn't care."
+  },
+  {
+    "id": "DA_SampleData_111",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "That public map shows the city in a form that no longer exists. Roads are flooded, blocked, burned, or simply gone. Every pointing hand becomes a different version of hope. No one is foolish. No one is certain. They're trying to use old knowledge of the world to navigate the new one. The maps never had a chance to catch up."
+  },
+  {
+    "id": "DA_SampleData_112",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "They're close enough to their home to touch it, but they can't go inside. There's a wound here. The porch has become a border between staying and leaving, safety and memory, shelter and risk. They sleep outside because their bodies had to rest somewhere, even if their minds couldn't make a decision."
+  },
+  {
+    "id": "DA_SampleData_113",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "A school bag is built to carry books. That's the intended design from the old world. However, the books must come out so that survival has room. The child watches without any awareness that school has ended forever.  School doesn't end with a bell. It ends when someone decides a bag must carry food instead of lessons."
+  },
+  {
+    "id": "DA_SampleData_114",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "The route no longer exists, but the driver still holds his door open for passengers to come aboard. He still maintains his duty even though the greater system is failing all around them. The passengers sit despite the danger because the driver still plays his role. The bus resembles order for them, but only for as long as the driver stands because there's nowhere left to drive."
+  },
+  {
+    "id": "DA_SampleData_115",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "A house key is a tiny object with enormous amounts of life attached to it. It means many things: a door, rooms, a bed, a cupboard, and a place where one can always return. Here it's being given away before the home has physically disappeared. Ownership can end before walls fall. Sometimes, a home abandons a family before they can abandon it."
+  },
+  {
+    "id": "DA_SampleData_116",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "The world isn't safe, but a birthday arrived anyway. The parents decided to create an ad hoc celebration on the street curb because children experience time differently. One small flame, one small present, one moment where the child is allowed to be more than just an evacuee. It's almost nothing, but it represents nearly everything they can still give."
+  },
+  {
+    "id": "DA_SampleData_117",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "The child doesn't know this is the last look at home. The parent may know. The house is already gone in every way that matters. Yet, the child tries to turn back as if the growing distance can somehow be undone. In the minds of children, home always waits for them because home always has waited before."
   },
   {
     "id": "DA_SampleData_118",
@@ -358,6 +580,18 @@
     "title": "Hidden",
     "uncollectedDescription": "No peeking",
     "sentDescription": "He locked himself in the cold because it was the last thing the station could still offer him: a little time. His experiments weren't merely research, and what happened wasn't just an accident. Something had been grown in his lab, a thing that couldn't be contained. The most terrible part is not that he died alone. It is that, before the end, he could hear it outside the chamber… and knew it was listening too."
+  },
+  {
+    "id": "DA_SampleData_132",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "A healthy person would not sit here like this. A frightened person would not either. He has passed both of those states. This is what a human looks like when fatigue, humiliation, and despair have hollowed out the space where caution used to live. The body still has needs. The spirit has stopped negotiating with them."
+  },
+  {
+    "id": "DA_SampleData_133",
+    "title": "Hidden",
+    "uncollectedDescription": "No peeking",
+    "sentDescription": "They used to ask the smaller children to come play before the nightly Manifest count. Years later, survivors remembered the image more than the invitation: two girls standing together, waiting as if they had always been there."
   },
   {
     "id": "DA_SampleData_CavePainting_502",
