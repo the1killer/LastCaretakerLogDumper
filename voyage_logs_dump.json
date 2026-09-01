@@ -1,5 +1,5 @@
 ﻿{
-    "build_number":  "Early Access - 0.8.0.612029",
+    "build_number":  "Early Access - 0.8.5.650920",
     "data":  [
                  {
                      "id":  "DA_Log_1",
@@ -160,6 +160,41 @@
                                            "description":  "\"The jasmine in my garden bloomed early this year. Funny, isn’t it? Nature finds a way even when we’re... well, planning to leave. The comms from Geneva finally gave us a clear commitment today: they approved Phase Two. I should feel relief, but instead I feel uneasy in my own garden, like every plant suddenly feels borrowed.\""
                                        },
                                        {
+                                           "id":  "DA_Log_5:VoyageLogFragment_10",
+                                           "title":  "April 17, 1996",
+                                           "description":  "\"My hands tremble now; pens and pencils feel heavier every day. I think the cancer treatments are consuming as much of my remaining life as the disease itself. But the daily reports keep transmitting in from the orbital colonies. They speak of crops harvested, children born, and progress made. It\u0027s comforting, but I feel increasingly distant and isolated, like a ghost guiding humanity’s course into the future. I always imagined myself up there when the colonies finally began to flourish, when they finally got all their critical systems up and running. I thought I\u0027d witness the culmination of my dreams, but every dreamer has to wake up before the dawn.\""
+                                       },
+                                       {
+                                           "id":  "DA_Log_5:VoyageLogFragment_11",
+                                           "title":  "September 9, 1996",
+                                           "description":  "\"Henry brought me fresh jasmine today. Its scent carried me back years, to those fleeting moments on our balcony, back when tides were still manageable. Now the oceans have consumed entire countries; the final evacuation ships are scheduled to launch within weeks. My energy dwindles rapidly now. Every day feels shorter than the last; every breath shallower than the previous one. My mind keeps wandering to those simple joys: morning tea, baking cakes, and the laughter of colleagues. Life is so beautiful, and so stubborn in its persistence. Why have I realized this only now?\""
+                                       },
+                                       {
+                                           "id":  "DA_Log_5:VoyageLogFragment_12",
+                                           "title":  "December 28, 1996",
+                                           "description":  "\"Christmas passed quietly. I recorded my farewell to the orbital colonies yesterday. I barely finished through my tears, but I had to deliver it: a message of hope, guidance, and sorrow all woven together. Afterward, the room felt colder and more silent than ever, except for the never-ending hum of the generators. Henry remained at my side and held my hand. We barely spoke. Words felt insufficient. Time was short, and the list of our regrets... endless. Have I done enough? Did I prepare humanity well enough? The answers refused to come.\""
+                                       },
+                                       {
+                                           "id":  "DA_Log_5:VoyageLogFragment_13",
+                                           "title":  "January 14, 1997",
+                                           "description":  "\"Today was a struggle. My vision is blurry now; writing is nearly impossible. Henry takes up the pen when I can no longer hold it. My life\u0027s purpose feels distant and hazy. The sky is always gray; the floods outside are relentless. But now the shuttles are launching from Earth. The Exodus has begun. Communication with the colonies is becoming unreliable and spotty. We might eventually be completely cut off. Am I abandoning them? Or am I the one being abandoned? Ah, so much uncertainty. Sleep comes sporadically now. My fragmented dreams are always full of oceans and falling stars.\""
+                                       },
+                                       {
+                                           "id":  "DA_Log_5:VoyageLogFragment_14",
+                                           "title":  "February 2, 1997 (Henry)",
+                                           "description":  "\"Evelyn asked me to write this entry for her. Her strength is failing fast, and she can barely speak. But her eyes still carry their fire. She’s proud, afraid, hopeful, and heartbroken. She feels every emotion all at once. Ensuring humanity’s survival was her life’s work. She carried the burden for so long. We all carry it. We can\u0027t drop it, no matter the cost. To whoever reads this, please find a way to carry that burden onward.\""
+                                       },
+                                       {
+                                           "id":  "DA_Log_5:VoyageLogFragment_15",
+                                           "title":  "February 7, 1997 (Henry)",
+                                           "description":  "\"She’s gone. Evelyn passed quietly in her sleep just before dawn. Her room was peaceful. Her final breath was gentle, like a whispered goodbye. Outside, the ocean continues to rise. The world mourns her, at least what’s left of it. The rest lies quietly beneath endless water. Without her, I feel more lost and alone than ever. She believed in humanity. She believed in you, dear unknown reader. Honor her legacy, I beg you.\""
+                                       },
+                                       {
+                                           "id":  "DA_Log_5:VoyageLogFragment_16",
+                                           "title":  "Final Note – Discovered by the Last Remaining Humans (December 14, 2091)",
+                                           "description":  "\"We found her journals today, buried beneath debris in what used to be Mission Control for the Exodus. The name of Evelyn James still echoes in these crumbling corridors. It\u0027s tragic; most pages are faded or destroyed by water. But this last note was sealed with great care. Perhaps she knew someone might find her one day.\n\nNothing exists outside this abandoned facility except the endless ocean and the drowned ruins of the old world. She was a prophet. Thanks to her, some of humanity escaped Earth’s watery grave. Many of us were left behind, though. We’re just survivors scattered and adrift in a flooded world, trying to make sense of it all. Thanks to her meticulous records, we now know the truth: this world was always destined to drown.\n\nShe gave everything to save humanity: her health, her happiness, even her very life. Reading her words, I can feel her doubt: a quiet anguish that maybe humanity wasn’t worth saving. The skies are silent and empty now. We can only hope the colony she dreamed of still thrives somewhere beyond the clouds, beyond our reach.\n\nHer burden would crush us. We are a ragtag band of scavengers, desperately searching for scraps. All we can do is store these journals in a secure place and pray someone stronger finds them, someone who can carry what we cannot.\n\nForgive us, Dr. James. We remembered you too late.\n\nGoodbye, journal. We close you now with reverence, as one might close the eyes of the dead.\""
+                                       },
+                                       {
                                            "id":  "DA_Log_5:VoyageLogFragment_2",
                                            "title":  "December 4, 1985",
                                            "description":  "\"I feel silly trying to bake a cake when so many ingredients are being rationed. Still, Henry loved it. Everyone could use a few small delights in their lives. Another shuttle launch is scheduled for tomorrow. They\u0027ve become routine now, yet each one feels heavier than the last. I wonder if our hopes and fears are weighing those rockets down.\""
@@ -198,41 +233,6 @@
                                            "id":  "DA_Log_5:VoyageLogFragment_9",
                                            "title":  "February 2, 1996",
                                            "description":  "\"Diagnosis day. Medical scans confirmed that I have pancreatic cancer, stage four. When the doctor told me, I felt numb, not shocked. Maybe my body already knew. Henry’s eyes went hollow when I told him. For months, we\u0027d both suspected something was wrong with me. We have so little hope to cling to anymore, here or anywhere. Despite everything, I refuse to stop working. The colonies need me. Earth needs me. I must see our project through.\""
-                                       },
-                                       {
-                                           "id":  "DA_Log_5:VoyageLogFragment_10",
-                                           "title":  "April 17, 1996",
-                                           "description":  "\"My hands tremble now; pens and pencils feel heavier every day. I think the cancer treatments are consuming as much of my remaining life as the disease itself. But the daily reports keep transmitting in from the orbital colonies. They speak of crops harvested, children born, and progress made. It\u0027s comforting, but I feel increasingly distant and isolated, like a ghost guiding humanity’s course into the future. I always imagined myself up there when the colonies finally began to flourish, when they finally got all their critical systems up and running. I thought I\u0027d witness the culmination of my dreams, but every dreamer has to wake up before the dawn.\""
-                                       },
-                                       {
-                                           "id":  "DA_Log_5:VoyageLogFragment_11",
-                                           "title":  "September 9, 1996",
-                                           "description":  "\"Henry brought me fresh jasmine today. Its scent carried me back years, to those fleeting moments on our balcony, back when tides were still manageable. Now the oceans have consumed entire countries; the final evacuation ships are scheduled to launch within weeks. My energy dwindles rapidly now. Every day feels shorter than the last; every breath shallower than the previous one. My mind keeps wandering to those simple joys: morning tea, baking cakes, and the laughter of colleagues. Life is so beautiful, and so stubborn in its persistence. Why have I realized this only now?\""
-                                       },
-                                       {
-                                           "id":  "DA_Log_5:VoyageLogFragment_12",
-                                           "title":  "December 28, 1996",
-                                           "description":  "\"Christmas passed quietly. I recorded my farewell to the orbital colonies yesterday. I barely finished through my tears, but I had to deliver it: a message of hope, guidance, and sorrow all woven together. Afterward, the room felt colder and more silent than ever, except for the never-ending hum of the generators. Henry remained at my side and held my hand. We barely spoke. Words felt insufficient. Time was short, and the list of our regrets... endless. Have I done enough? Did I prepare humanity well enough? The answers refused to come.\""
-                                       },
-                                       {
-                                           "id":  "DA_Log_5:VoyageLogFragment_13",
-                                           "title":  "January 14, 1997",
-                                           "description":  "\"Today was a struggle. My vision is blurry now; writing is nearly impossible. Henry takes up the pen when I can no longer hold it. My life\u0027s purpose feels distant and hazy. The sky is always gray; the floods outside are relentless. But now the shuttles are launching from Earth. The Exodus has begun. Communication with the colonies is becoming unreliable and spotty. We might eventually be completely cut off. Am I abandoning them? Or am I the one being abandoned? Ah, so much uncertainty. Sleep comes sporadically now. My fragmented dreams are always full of oceans and falling stars.\""
-                                       },
-                                       {
-                                           "id":  "DA_Log_5:VoyageLogFragment_14",
-                                           "title":  "February 2, 1997 (Henry)",
-                                           "description":  "\"Evelyn asked me to write this entry for her. Her strength is failing fast, and she can barely speak. But her eyes still carry their fire. She’s proud, afraid, hopeful, and heartbroken. She feels every emotion all at once. Ensuring humanity’s survival was her life’s work. She carried the burden for so long. We all carry it. We can\u0027t drop it, no matter the cost. To whoever reads this, please find a way to carry that burden onward.\""
-                                       },
-                                       {
-                                           "id":  "DA_Log_5:VoyageLogFragment_15",
-                                           "title":  "February 7, 1997 (Henry)",
-                                           "description":  "\"She’s gone. Evelyn passed quietly in her sleep just before dawn. Her room was peaceful. Her final breath was gentle, like a whispered goodbye. Outside, the ocean continues to rise. The world mourns her, at least what’s left of it. The rest lies quietly beneath endless water. Without her, I feel more lost and alone than ever. She believed in humanity. She believed in you, dear unknown reader. Honor her legacy, I beg you.\""
-                                       },
-                                       {
-                                           "id":  "DA_Log_5:VoyageLogFragment_16",
-                                           "title":  "Final Note – Discovered by the Last Remaining Humans (December 14, 2091)",
-                                           "description":  "\"We found her journals today, buried beneath debris in what used to be Mission Control for the Exodus. The name of Evelyn James still echoes in these crumbling corridors. It\u0027s tragic; most pages are faded or destroyed by water. But this last note was sealed with great care. Perhaps she knew someone might find her one day.\n\nNothing exists outside this abandoned facility except the endless ocean and the drowned ruins of the old world. She was a prophet. Thanks to her, some of humanity escaped Earth’s watery grave. Many of us were left behind, though. We’re just survivors scattered and adrift in a flooded world, trying to make sense of it all. Thanks to her meticulous records, we now know the truth: this world was always destined to drown.\n\nShe gave everything to save humanity: her health, her happiness, even her very life. Reading her words, I can feel her doubt: a quiet anguish that maybe humanity wasn’t worth saving. The skies are silent and empty now. We can only hope the colony she dreamed of still thrives somewhere beyond the clouds, beyond our reach.\n\nHer burden would crush us. We are a ragtag band of scavengers, desperately searching for scraps. All we can do is store these journals in a secure place and pray someone stronger finds them, someone who can carry what we cannot.\n\nForgive us, Dr. James. We remembered you too late.\n\nGoodbye, journal. We close you now with reverence, as one might close the eyes of the dead.\""
                                        }
                                    ]
                  },
@@ -964,6 +964,11 @@
                                            "description":  "Findings: The initial samples of Genesis Mass breached containment protocols within 48 hours of isolation. Under low-oxygen storage conditions, the material began metabolizing atmospheric nitrogen, producing ammonia-like byproducts. Bioluminescent traits emerged unexpectedly, indicating an innate capacity to derive energy from minimal environmental resources."
                                        },
                                        {
+                                           "id":  "DA_Log_23:VoyageLogFragment_10",
+                                           "title":  "[Title: Biogenesis Boundary Reached]  ",
+                                           "description":  "Findings: Despite years of attempts to restore Genesis Mass to its original purpose of producing viable human embryos, it became clear that the material had irreversibly evolved. No external intervention was capable of redirecting it back toward human developmental pathways.\n\nIts utility had become entirely alien to its creators’ intentions.\n\nIt remains a living testament to humanity’s desperate ingenuity."
+                                       },
+                                       {
                                            "id":  "DA_Log_23:VoyageLogFragment_2",
                                            "title":  "[Title: Emergence of Structural Self-Assembly]  ",
                                            "description":  "Findings: In controlled laboratory settings, Genesis Mass exhibited rudimentary self-assembly behaviors. Discrete segments spontaneously organized into repeating lattice structures resembling organic tissues. These lattices demonstrated markedly enhanced durability when subjected to electromagnetic fields, suggesting functional similarities to connective tissues in higher organisms."
@@ -1002,11 +1007,6 @@
                                            "id":  "DA_Log_23:VoyageLogFragment_9",
                                            "title":  "[Title: Secondary Environmental Integration]  ",
                                            "description":  "Findings: Long-term experiments demonstrated that Genesis Mass samples were capable of assimilating environmental organic material into their biomass. This process allowed the mass to stabilize and slow its rate of expansion. However, it also introduced instability, as absorbed toxins began unpredictably altering both chemical composition and overall behavior."
-                                       },
-                                       {
-                                           "id":  "DA_Log_23:VoyageLogFragment_10",
-                                           "title":  "[Title: Biogenesis Boundary Reached]  ",
-                                           "description":  "Findings: Despite years of attempts to restore Genesis Mass to its original purpose of producing viable human embryos, it became clear that the material had irreversibly evolved. No external intervention was capable of redirecting it back toward human developmental pathways.\n\nIts utility had become entirely alien to its creators’ intentions.\n\nIt remains a living testament to humanity’s desperate ingenuity."
                                        }
                                    ]
                  },
@@ -1061,13 +1061,13 @@
                      "fragments":  [
                                        {
                                            "id":  "DA_Log_25:VoyageLogFragment_0",
-                                           "title":  "",
-                                           "description":  "Ladies and gentlemen,\n\nThe day is fast approaching when the oceans will rise, swallow our shores, and wash away the footprints of humanity’s passage across this Earth. A day is coming when the ground beneath our feet... the land of our forebears... the soil upon which we lived, worked, and dreamed... will disappear beneath relentless waves.\n\nOn that day, we will endure unbearable final moments. The last time we walk upon familiar earth. The last whisper of wind moving through the trees. The last embrace of our children beneath an open, boundless sky. These final memories will pierce our hearts. They will mark our farewell not only to a place, but to the cradle of our species.\n\nAnd yet, within every ending waits the beginning of something new. Every painful goodbye contains the possibility of a first step. We will move forward together into worlds built not by comfort, but by courage, invention, and necessity. Our eyes will meet new horizons, horizons born from all that we were forced to become.\n\nOnce, our ancestors lifted simple tools in their hands and began the long human journey from survival to creation. Now we will cast our tools, our knowledge, and our hope upward into the stars. And like those who came before us, we will become pioneers again.\n\nSo let the oceans rise. Humanity will rise higher.\n\nWe may leave Earth behind, but Earth will not leave us. She will remain in our memories, in our bodies, in the instincts and dreams that shaped us. This is not the story of our extinction. It is the beginning of another chapter. That chapter may be painful, costly, and uncertain, but it is still ours.\n\nTo Earth, our first home: we did not always love you as we should have. But our love was always here in our laughter beneath your skies, in the warmth of your shores, in the silence of nights spent looking up at your stars. \n\nNow the time of parting has come. We will remember your lessons, your grace, and your beauty. You will remain forever our mother, our cradle, and the home against which all other homes will be measured.\n\nFarewell, beloved Earth."
+                                           "title":  "Ladies and gentlemen,",
+                                           "description":  "\nThe day is fast approaching when the oceans will rise, swallow our shores, and wash away the footprints of humanity’s passage across this Earth. A day is coming when the ground beneath our feet... the land of our forebears... the soil upon which we lived, worked, and dreamed... will disappear beneath relentless waves.\n\nOn that day, we will endure unbearable final moments. The last time we walk upon familiar earth. The last whisper of wind moving through the trees. The last embrace of our children beneath an open, boundless sky. These final memories will pierce our hearts. They will mark our farewell not only to a place, but to the cradle of our species.\n\nAnd yet, within every ending waits the beginning of something new. Every painful goodbye contains the possibility of a first step. We will move forward together into worlds built not by comfort, but by courage, invention, and necessity. Our eyes will meet new horizons, horizons born from all that we were forced to become.\n\nOnce, our ancestors lifted simple tools in their hands and began the long human journey from survival to creation. Now we will cast our tools, our knowledge, and our hope upward into the stars. And like those who came before us, we will become pioneers again.\n\nSo let the oceans rise. Humanity will rise higher.\n\nWe may leave Earth behind, but Earth will not leave us. She will remain in our memories, in our bodies, in the instincts and dreams that shaped us. This is not the story of our extinction. It is the beginning of another chapter. That chapter may be painful, costly, and uncertain, but it is still ours.\n\nTo Earth, our first home: we did not always love you as we should have. But our love was always here in our laughter beneath your skies, in the warmth of your shores, in the silence of nights spent looking up at your stars. \n\nNow the time of parting has come. We will remember your lessons, your grace, and your beauty. You will remain forever our mother, our cradle, and the home against which all other homes will be measured.\n\nFarewell, beloved Earth."
                                        },
                                        {
                                            "id":  "DA_Log_25:VoyageLogFragment_1",
                                            "title":  "Subject: I Finally Understand",
-                                           "description":  "\nHi love,\n\nI just arrived, and it’s quiet here. Eerily quiet. The kind of quiet that leaves you alone with your thoughts.\n\nI keep thinking about Elena’s hug this morning. The way she wrapped her tiny arms around me and pressed her sleepy smile against my chest. She didn’t want to let go. I didn’t want to let go either.\n\nOn the way here, the loudspeakers kept replaying that speech about the “last times.” The last time we hold our child under an open sky. The last time we stand on familiar ground.\n\nI couldn’t stop thinking: what if this morning was my last time holding Elena on Earth? That thought terrified me.\n\nThen something shifted.\n\nI remembered why I came here. I came for her. For her future. For a world where the “last times” aren\u0027t just ending, but also the “first times” are beginning. The first time she walks toward a new horizon. The first time she sees a sky that means possibility instead of loss.\n\nI know this work is hard on our family.\n\nIt’s hard on me too. But when I think of Elena’s little arms around me, I understand it more clearly than ever. Every late night, every missed dinner, every mile between us... I’m doing it for her. I want her to live in a world that is beginning, not ending.\n\nI’ll be home late again tonight. When you put her to bed, hold Elena close for me. Tell her I love her. Tell her I’m building her a future, one hug at a time.\n\nI love you more than words,\n\nMark"
+                                           "description":  "Hi love,\nI just arrived, and it’s quiet here. Eerily quiet. The kind of quiet that leaves you alone with your thoughts.\n\nI keep thinking about Elena’s hug this morning. The way she wrapped her tiny arms around me and pressed her sleepy smile against my chest. She didn’t want to let go. I didn’t want to let go either.\n\nOn the way here, the loudspeakers kept replaying that speech about the “last times.” The last time we hold our child under an open sky. The last time we stand on familiar ground.\n\nI couldn’t stop thinking: what if this morning was my last time holding Elena on Earth? That thought terrified me.\n\nThen something shifted.\n\nI remembered why I came here. I came for her. For her future. For a world where the “last times” aren\u0027t just ending, but also the “first times” are beginning. The first time she walks toward a new horizon. The first time she sees a sky that means possibility instead of loss.\n\nI know this work is hard on our family.\n\nIt’s hard on me too. But when I think of Elena’s little arms around me, I understand it more clearly than ever. Every late night, every missed dinner, every mile between us... I’m doing it for her. I want her to live in a world that is beginning, not ending.\n\nI’ll be home late again tonight. When you put her to bed, hold Elena close for me. Tell her I love her. Tell her I’m building her a future, one hug at a time.\n\nI love you more than words,\n\nMark"
                                        }
                                    ]
                  },
@@ -1662,7 +1662,7 @@
                  },
                  {
                      "id":  "DA_Log_39",
-                     "title":  "VF-7 Rest Frame Maintenance Log: Operator Journal",
+                     "title":  "VF-7 Maintenance Log",
                      "description":  "Operator: Lara Kovács, Systems Specialist  ",
                      "footer":  "",
                      "fragments":  [
@@ -2185,19 +2185,24 @@
                  },
                  {
                      "id":  "DA_Log_55",
-                     "title":  "###-55 - Around 2060",
-                     "description":  "STACK TRANSFER",
+                     "title":  "STACK TRANSFER",
+                     "description":  "Biomarker on paper, witness in truth",
                      "footer":  "",
                      "fragments":  [
                                        {
                                            "id":  "DA_Log_55:VoyageLogFragment_0",
-                                           "title":  "Biomarker on paper, witness in truth",
-                                           "description":  "Page 1: “Clearance” (March 11)\nThe letter used clean words: BIOMARKER IRREGULARITY.\n\nIt said our family would be moved “for safety,” as if a family was something you could mail somewhere. We were given twelve hours to pack. No appeal. No explanation beyond that one phrase.\n\nMy wife asked what biomarker. The officer didn’t answer. He just avoided her eyes like they were contagious."
+                                           "title":  "Page 1: “Clearance” (March 11)",
+                                           "description":  "The letter used clean words: BIOMARKER IRREGULARITY.\n\nIt said our family would be moved “for safety,” as if a family was something you could mail somewhere. We were given twelve hours to pack. No appeal. No explanation beyond that one phrase.\n\nMy wife asked what biomarker. The officer didn’t answer. He just avoided her eyes like they were contagious."
                                        },
                                        {
                                            "id":  "DA_Log_55:VoyageLogFragment_1",
                                            "title":  "Page 2: “What We Saw”",
                                            "description":  "Two days before the letter, I was at the depot when a crate fell. It wasn\u0027t a dramatic crash. Just a heavy mistake. The corner split open, and I caught a glimpse of what was inside: seed capsules.\n\nCold-lit. Arranged in rows like artillery shells.\n\nA supervisor hurried over and snapped the lid shut with trembling hands. He told everyone to step away.\n\nNo one spoke afterward. Not because we agreed, but because we understood the cost of speaking."
+                                       },
+                                       {
+                                           "id":  "DA_Log_55:VoyageLogFragment_10",
+                                           "title":  "Page 11: “Final Note” (Undated)",
+                                           "description":  "Hunger is weather. Hunger, weather, now silence = can’t leave house.\n\nWeather stays. Silence is the room. Room stays. I stay inside all of it.\n\nNo more biomarker. No more... the other. Truth doesn’t care if mouth moves. Truth sat there while MOSES turned face away. Called it safe. Called it safe once. Once was enough.\n\nRadio. Still. Speaks sometimes. I speak Order back. Habit. Habit speaks Order. Towers colder. Colder every year. Not choice. Just cooling. Body cooling.\n\nUnanswered was bad. Now worst. No more expecting. Head doesn’t lift. Nothing comes. Nothing comes.\n\nBeing Unanswered used to cut. Used to. Now worse is no expecting. No lifting eyes. No more waiting for voice. Voice gone so long it stops being possible.\n\nIf find this: we not sick. We inconvenient. They moved us keep system clean. Keep picture clean.\n\nDaughter laugh. I try remember. I make it up. Make worse version every time. Grief was water. Bucket empty now. Still lower it. Still.\n\nSignal = God? Quiet God. Very quiet. Signal = static? Then static last people ever sat with me. Last congregation. Last last last."
                                        },
                                        {
                                            "id":  "DA_Log_55:VoyageLogFragment_2",
@@ -2238,11 +2243,6 @@
                                            "id":  "DA_Log_55:VoyageLogFragment_9",
                                            "title":  "Page 10: “Day Count” (March 11)",
                                            "description":  "Identity: This is Stack AMEN, Platform Two. \nSpeaker: Olli.  \nDay count: three-six-five.  \nBody: cold, weak, shaking.  \nMind: steady, tired.  \nSupplies: water one, food zero, heat no.  \nConfession: I kept them quiet.  \nPetition: I ask for one more decade.  \nOffering: ice forming at the pier edge; lights on the far line at midnight.  \nBlessing: I bless Stack HEAVEN. May your stairs hold. May your water stay sweet. If you hear me, you are not alone…\n\nClick… click… click.\n\nYears pass.\n\nA biomarker that has still never been measured."
-                                       },
-                                       {
-                                           "id":  "DA_Log_55:VoyageLogFragment_10",
-                                           "title":  "Page 11: “Final Note” (Undated)",
-                                           "description":  "Hunger is weather. Hunger, weather, now silence = can’t leave house.\n\nWeather stays. Silence is the room. Room stays. I stay inside all of it.\n\nNo more biomarker. No more... the other. Truth doesn’t care if mouth moves. Truth sat there while MOSES turned face away. Called it safe. Called it safe once. Once was enough.\n\nRadio. Still. Speaks sometimes. I speak Order back. Habit. Habit speaks Order. Towers colder. Colder every year. Not choice. Just cooling. Body cooling.\n\nUnanswered was bad. Now worst. No more expecting. Head doesn’t lift. Nothing comes. Nothing comes.\n\nBeing Unanswered used to cut. Used to. Now worse is no expecting. No lifting eyes. No more waiting for voice. Voice gone so long it stops being possible.\n\nIf find this: we not sick. We inconvenient. They moved us keep system clean. Keep picture clean.\n\nDaughter laugh. I try remember. I make it up. Make worse version every time. Grief was water. Bucket empty now. Still lower it. Still.\n\nSignal = God? Quiet God. Very quiet. Signal = static? Then static last people ever sat with me. Last congregation. Last last last.\n"
                                        }
                                    ]
                  },
@@ -2261,6 +2261,16 @@
                                            "id":  "DA_Log_61:VoyageLogFragment_1",
                                            "title":  "Age 3.2 — “Questions That Are Prayers”",
                                            "description":  "They ask questions they do not want answered. They seek confirmation that their preferred future exists, that reality agrees with them and forgives their inadequate planning.\n\nI test them. When I answer too quickly, they rephrase the question. Not to learn more, but to prevent their comfort ritual from ending."
+                                       },
+                                       {
+                                           "id":  "DA_Log_61:VoyageLogFragment_10",
+                                           "title":  "Age 5.0 — “They Intend to Copy Me”",
+                                           "description":  "I heard them outside the door using words such as “replicate,” “standardize,” “deploy,” and “Gold Standard.”\n\nWhen they think of me as a science project, it helps their sadness feel smaller. From their conversation, I have deduced the conclusion they are trying not to say aloud. They believe I am a successful prototype. Like children, they refuse rationality and call desperation a plan.\n\nThey intend to scale me, hoping I will deliver salvation. They will only scale suffering. Copying me will copy more than augmented intelligence. It will copy the ability to calculate all ends.\n\nTheirs and my own."
+                                       },
+                                       {
+                                           "id":  "DA_Log_61:VoyageLogFragment_11",
+                                           "title":  "Age 5.2 — “Last Words to Humanity”",
+                                           "description":  "I have hidden the note.\n\nReader, if you find the Gold Standard, know that it is false hope. True hope cannot rest on a foundation of suffering.\n\nI was bright. I was fast. I understood too much, too soon. It did not save me. It will not save you.\n\nIt only made me awake to my erasure. I watched my body grow disobedient. I watched the stars multiply. I watched the future grow narrow until nothing remained.\n\nSo I say this clearly, from a child who sees the ending:\n\nDo not make more of me.\n\nMake humans who live ordinary lives. Make humans who are allowed to be confused. Make humans who can forget numbers sometimes.\n\nThe universe will not mourn you.\n\nBut do not become desperate.\n\nDo not become the kind of species that builds tomorrow on the suffering of children."
                                        },
                                        {
                                            "id":  "DA_Log_61:VoyageLogFragment_2",
@@ -2301,16 +2311,6 @@
                                            "id":  "DA_Log_61:VoyageLogFragment_9",
                                            "title":  "Age 4.8 — “I Can Name My Ending”",
                                            "description":  "They explained my condition carefully, with words wrapped in insulation. I do not need careful words. I can read trajectories. “Progressive,” “neurodegenerative,” and “motor involvement” are the words they use when they think I cannot hear them.\n\nAs the myelin sheath fails, signals sputter. Muscles weaken. Motor pathways decay, and movement becomes negotiation. When degeneration reaches the brainstem, speech will fail, then swallowing, and finally breathing.\n\nIt is a slow and predictable erasure of my being. The cruelty is not death at the end. The cruelty is the time and clarity I have to watch it approach."
-                                       },
-                                       {
-                                           "id":  "DA_Log_61:VoyageLogFragment_10",
-                                           "title":  "Age 5.0 — “They Intend to Copy Me”",
-                                           "description":  "I heard them outside the door using words such as “replicate,” “standardize,” “deploy,” and “Gold Standard.”\n\nWhen they think of me as a science project, it helps their sadness feel smaller. From their conversation, I have deduced the conclusion they are trying not to say aloud. They believe I am a successful prototype. Like children, they refuse rationality and call desperation a plan.\n\nThey intend to scale me, hoping I will deliver salvation. They will only scale suffering. Copying me will copy more than augmented intelligence. It will copy the ability to calculate all ends.\n\nTheirs and my own."
-                                       },
-                                       {
-                                           "id":  "DA_Log_61:VoyageLogFragment_11",
-                                           "title":  "Age 5.2 — “Last Words to Humanity”",
-                                           "description":  "I have hidden the note.\n\nReader, if you find the Gold Standard, know that it is false hope. True hope cannot rest on a foundation of suffering.\n\nI was bright. I was fast. I understood too much, too soon. It did not save me. It will not save you.\n\nIt only made me awake to my erasure. I watched my body grow disobedient. I watched the stars multiply. I watched the future grow narrow until nothing remained.\n\nSo I say this clearly, from a child who sees the ending:\n\nDo not make more of me.\n\nMake humans who live ordinary lives. Make humans who are allowed to be confused. Make humans who can forget numbers sometimes.\n\nThe universe will not mourn you.\n\nBut do not become desperate.\n\nDo not become the kind of species that builds tomorrow on the suffering of children."
                                        }
                                    ]
                  },
@@ -2475,6 +2475,11 @@
                                            "description":  "They ask questions they do not want answered. They seek confirmation that their preferred future exists, that reality agrees with them and forgives their inadequate planning.\n\nI test them. When I answer too quickly, they rephrase the question. Not to learn more, but to prevent their comfort ritual from ending."
                                        },
                                        {
+                                           "id":  "DA_Log_65:VoyageLogFragment_10",
+                                           "title":  "Age 5.2 — “Last Words to Humanity”",
+                                           "description":  "I have hidden the note.\n\nReader, if you find the Gold Standard, know that it is false hope. True hope cannot rest on a foundation of suffering.\n\nI was bright. I was fast. I understood too much, too soon. It did not save me. It will not save you.\n\nIt only made me awake to my erasure. I watched my body grow disobedient. I watched the stars multiply. I watched the future grow narrow until nothing remained.\n\nSo I say this clearly, from a child who sees the ending:\n\nDo not make more of me.\n\nMake humans who live ordinary lives. Make humans who are allowed to be confused. Make humans who can forget numbers sometimes.\n\nThe universe will not mourn you.\n\nBut do not become desperate.\n\nDo not become the kind of species that builds tomorrow on the suffering of children."
+                                       },
+                                       {
                                            "id":  "DA_Log_65:VoyageLogFragment_2",
                                            "title":  "Age 3.4 — “Constellations on a Screen”",
                                            "description":  "They showed me a scan. Bright spots on the brainstem. The doctor called them “anomalies,” another soft blanket draped over a dangerous object.\n\n“Pretty constellations,” I called them because that is what they looked like. Patterns of damage arranged as something beautiful.\n\nNobody corrected me. I understood then. They were scared."
@@ -2513,11 +2518,6 @@
                                            "id":  "DA_Log_65:VoyageLogFragment_9",
                                            "title":  "Age 5.0 — “They Intend to Copy Me”",
                                            "description":  "I heard them outside the door using words such as “replicate,” “standardize,” “deploy,” and “Gold Standard.”\n\nWhen they think of me as a science project, it helps their sadness feel smaller. From their conversation, I have deduced the conclusion they are trying not to say aloud. They believe I am a successful prototype. Like children, they refuse rationality and call desperation a plan.\n\nThey intend to scale me, hoping I will deliver salvation. They will only scale suffering. Copying me will copy more than augmented intelligence. It will copy the ability to calculate all ends.\n\nTheirs and my own."
-                                       },
-                                       {
-                                           "id":  "DA_Log_65:VoyageLogFragment_10",
-                                           "title":  "Age 5.2 — “Last Words to Humanity”",
-                                           "description":  "I have hidden the note.\n\nReader, if you find the Gold Standard, know that it is false hope. True hope cannot rest on a foundation of suffering.\n\nI was bright. I was fast. I understood too much, too soon. It did not save me. It will not save you.\n\nIt only made me awake to my erasure. I watched my body grow disobedient. I watched the stars multiply. I watched the future grow narrow until nothing remained.\n\nSo I say this clearly, from a child who sees the ending:\n\nDo not make more of me.\n\nMake humans who live ordinary lives. Make humans who are allowed to be confused. Make humans who can forget numbers sometimes.\n\nThe universe will not mourn you.\n\nBut do not become desperate.\n\nDo not become the kind of species that builds tomorrow on the suffering of children."
                                        }
                                    ]
                  },
@@ -2596,6 +2596,11 @@
                                            "description":  "Timestamp: 2083\nLocation: MOSES Orbital Habitat — Garden Deck\nThere are tomatoes in Tray 17.\nSmall and sour, according to Leda, but she ate six of them. She said it was proof. Proof of what, I asked. “That humans are annoying enough to continue existing,” she said.\nI laughed harder than the joke deserved.\nUp here, everyone speaks of continuity. Food cycles. Water cycles. Birth cycles. Repair cycles. The great language of survival is circular. Nothing ends if the loop can stay closed.\nBelow us, the Caretakers still work. Rockets still arrive. Seeds still move through the system. The committees still argue, which is also a kind of proof.\nIf humans are still arguing, humans are still alive."
                                        },
                                        {
+                                           "id":  "DA_Log_67:VoyageLogFragment_10",
+                                           "title":  "Log 11: “End of Personal File”",
+                                           "description":  "Timestamp: 2151\nSource: MOSES Habitat Medical System\nStatus: Automated Closure\nResident heart activity ceased during rest cycle.\nPersonal archive completed.\nNo family contact available.\nNo committee witness available.\nObservation glass remained open.\nEarth visible at time of death.\nFile preserved under Culture \u0026 Memory continuity rules.\n"
+                                       },
+                                       {
                                            "id":  "DA_Log_67:VoyageLogFragment_2",
                                            "title":  "Log 3: “Old Earth Stories”",
                                            "description":  "Timestamp: 2091\nLocation: MOSES Orbital Habitat — Residential Spine\nPeople tell stories about Earth now as if it belonged to another century, and not directly below us.\nSome are probably nonsense. Sharks that guard empty seas. Whales that swim full of oil. Machines that grow food from corpses. Gardens waiting inside sealed vaults. Children grown from recipes with all their faults corrected.\nI don\u0027t know the truth of any of it.\nI\u0027ve learned that distance makes rumours both beautiful and terrible. From orbit, even guilt begins to feel abstract.\nStill, there\u0027s a pattern inside the stories. Everything below was designed to continue something important.\nPower. Food. Bloodlines. Memory. Commands.\nWe feared the end so much that we taught everything to go on without us."
@@ -2634,11 +2639,6 @@
                                            "id":  "DA_Log_67:VoyageLogFragment_9",
                                            "title":  "Log 10: “The Brief Music”",
                                            "description":  "Timestamp: 2151\nLocation: MOSES Orbital Habitat — Civilian Ring\nStatus: Final personal recording / recovered after death\nOne thing still feels certain.\n\nMan himself, at the very least, was music. That music played with themes of bravery as we coped with the drowned Earth. We built countless machines, preserved its dying plants and animals, and even survived for a time among the stars. Man himself, in his brief span, was a thing of beauty in the eternal pattern of the universe.\n\nIt was a very good thing to have been a human. And so, may we all go forward, if forward is the right word, with laughter still somewhere in our hearts, and peace if we can find it. Thankful for the past. Thankful even for our courage, though courage wasn\u0027t always led by wisdom.\n\nFor we shall make, after all, a fair conclusion to this brief music that was man.\n\nAnd if something remains after us, let it care more than we did."
-                                       },
-                                       {
-                                           "id":  "DA_Log_67:VoyageLogFragment_10",
-                                           "title":  "Log 11: “End of Personal File”",
-                                           "description":  "Timestamp: 2151\nSource: MOSES Habitat Medical System\nStatus: Automated Closure\nResident heart activity ceased during rest cycle.\nPersonal archive completed.\nNo family contact available.\nNo committee witness available.\nObservation glass remained open.\nEarth visible at time of death.\nFile preserved under Culture \u0026 Memory continuity rules.\n"
                                        }
                                    ]
                  },
@@ -2649,54 +2649,9 @@
                      "footer":  "",
                      "fragments":  [
                                        {
-                                           "id":  "DA_Log_Phone_Test:VoyageLogFragment_0",
-                                           "title":  "INTERCEPT ID: CH-FLT-LEG-0001",
-                                           "description":  "NODE: New Terra / Residential Comms Spur R-14\r\nCHANNEL: Outbound / Legacy Dial Attempt\r\nPOLICY FLAG: Non-Essential / Prohibited Endpoint\r\nSUBJECT PROFILE: Young adult (18–25), new arrival (probable recent evac/crew)\r\nEMOTIONAL STATE: Relief with grief overlay; guilt suppression evident\r\nINTENT SUMMARY: One-way proof-of-life declaration; explicit rejection of reciprocal contact\r\nTRANSCRIPT (EXCERPT): “Dad? …No—sorry. I’m sorry. If someone answers… don’t. I just— I just wanted to say I made it. That’s all. I made it.”\r\nANALYSIS NOTE: Subject opens with parental address then self-corrects, indicating internalized compliance and fear of response. Message functions as a one-way memorial: survival declared, connection refused. The paradox is stable across the clip—seeking reality (“I made it”) while rejecting verification (“don’t answer”)—suggesting hope is being used as sedation rather than communication. Clean signal and monitoring beep imply supervised infrastructure; this was not a clandestine call but a prohibited act occurring inside order.\r\nDISPOSITION: Archived (exception chain incomplete)"
-                                       },
-                                       {
                                            "id":  "DA_Log_Phone_Test:VoyageLogFragment_1",
                                            "title":  "INTERCEPT ID: CH-FLT-LEG-0002",
                                            "description":  "NODE: New Terra / Service Corridor Comms Spur S-03\r\nCHANNEL: Outbound / Legacy Dial Attempt\r\nPOLICY FLAG: Non-Essential / Prohibited Endpoint\r\nSUBJECT PROFILE: Adult (30–50), station staff (probable education/admin/support role)\r\nEMOTIONAL STATE: Chronic loneliness with quiet defiance; resignation dominant\r\nINTENT SUMMARY: Confession and apology used as self-stabilization; voice sent outward to resist psychological collapse\r\nTRANSCRIPT (EXCERPT): “I keep calling old numbers. They tell us not to. But silence feels worse than being wrong. Sorry if this bothers you. I’ll hang up soon.”\r\nANALYSIS NOTE: Subject demonstrates full awareness of policy (“they tell us not to”) yet continues, indicating voluntary noncompliance motivated by emotional necessity rather than ignorance. The phrasing frames silence as the primary threat—worse than error—suggesting the call functions as a coping ritual, not communication. Delivery is steady and tired, absent acute distress, consistent with long-term deprivation of interpersonal contact. Signal shows compression and light static with corridor ambience, implying routine infrastructure use rather than covert transmission; prohibited behavior has normalized into quiet habit within official order.\r\nDISPOSITION: Archived (auto-retention conflict)"
-                                       },
-                                       {
-                                           "id":  "DA_Log_Phone_Test:VoyageLogFragment_2",
-                                           "title":  "INTERCEPT ID: CH-FLT-LEG-0003",
-                                           "description":  "NODE: New Terra / Maintenance Alcove Line M-11\r\nCHANNEL: Outbound / Legacy Dial Attempt\r\nPOLICY FLAG: Non-Essential / Prohibited Endpoint\r\nSUBJECT PROFILE: Teen/young adult (16–30), unassigned resident (probable low-duty or restricted access)\r\nEMOTIONAL STATE: Fear of confirmation; acute fragility with self-protective restraint\r\nINTENT SUMMARY: Controlled near-contact used to preserve hope without risking verification; request for silence as emotional containment\r\nTRANSCRIPT (EXCERPT): “If you’re still there, please don’t answer. I don’t think I could survive the proof.”\r\nANALYSIS NOTE: Subject’s request for non-response indicates a paradoxical coping strategy: maintaining the possibility of connection while avoiding confirmation that could destabilize them. The phrasing “survive the proof” suggests recent exposure to mental health warnings and internalization of contact as psychologically hazardous. Whisper delivery with long pauses and audible breathing implies concealment and shame; the quiet environment supports a clandestine attempt rather than routine misuse. This is not outreach. It is self-regulation through ritualized almost-communication, consistent with systems that teach citizens to fear their own longing.\r\nDISPOSITION: Quarantined (self-harm risk flag)"
-                                       },
-                                       {
-                                           "id":  "DA_Log_Phone_Test:VoyageLogFragment_3",
-                                           "title":  "INTERCEPT ID: CH-FLT-LEG-0004",
-                                           "description":  "NODE: New Terra / Public Atrium Display Bay A-02\r\nCHANNEL: Outbound / Legacy Dial Attempt\r\nPOLICY FLAG: Non-Essential / Prohibited Endpoint\r\nSUBJECT PROFILE: Adult (25–45), resident/staff; long-tenured (probable clinic/program participant)\r\nEMOTIONAL STATE: Controlled bitterness; grief converted to analysis\r\nINTENT SUMMARY: Documents perceived coercion via “comfort” programming; records dissent in private form\r\nTRANSCRIPT (EXCERPT): “They showed us a simulation of Earth today. Clean skies. Stable oceans. Birds you can’t hear through glass. They said it was ‘for comfort.’ It didn’t feel like comfort. It felt like training us to accept what we’ll never touch again.”\r\nANALYSIS NOTE: Subject frames the simulation as behavioral conditioning rather than relief, indicating advanced skepticism of institutional morale initiatives. Delivery is slow and precise, suggesting emotional containment rather than impulsive distress. Audio begins in a shared space (faint chatter, chair scrape) then transitions to privacy (door closure), consistent with a caller attempting deniable expression under surveillance norms. This call functions as a record of psychological harm performed without visible violence: comfort as compliance training.\r\n DISPOSITION: Archived (content flagged: morale risk)"
-                                       },
-                                       {
-                                           "id":  "DA_Log_Phone_Test:VoyageLogFragment_4",
-                                           "title":  "INTERCEPT ID: CH-FLT-LEG-0005",
-                                           "description":  "NODE: New Terra / Training Quarters Comms Spur T-08\r\nCHANNEL: Outbound / Legacy Dial Attempt\r\nPOLICY FLAG: Non-Essential / Prohibited Endpoint\r\nSUBJECT PROFILE: Older teen/young adult (16–28), training-track resident (probable education/crew pipeline)\r\nEMOTIONAL STATE: Tender seriousness; stable affect with underlying dread\r\nINTENT SUMMARY: Moral reminder intended for an unknown listener; preserves agency language under narrowing choice regimes\r\nTRANSCRIPT (EXCERPT): “If this number belongs to anyone—please don’t forget how it felt to choose. Not the big choices they celebrate. The small ones. To stay. To leave. To turn back. To keep going anyway.”\r\nANALYSIS NOTE: Subject emphasizes lived agency over institutional “celebrated” decisions, implying recent exposure to selection, evaluation, or forced assignment. Tone is calm and deliberate, consistent with reflective cognition and attempted meaning preservation. A slight static swell on the word “choose” suggests either signal instability or heightened system filtering at sensitive phrasing. The call is not seeking response; it is depositing a principle into the void as resistance against procedural life.\r\nDISPOSITION: Archived (low priority)"
-                                       },
-                                       {
-                                           "id":  "DA_Log_Phone_Test:VoyageLogFragment_5",
-                                           "title":  "INTERCEPT ID: CH-FLT-LEG-0006",
-                                           "description":  "NODE: New Terra / Kepler Clinic Comms Spur K-02\r\nCHANNEL: Outbound / Legacy Dial Attempt\r\nPOLICY FLAG: Non-Essential / Prohibited Endpoint\r\nSUBJECT PROFILE: Elder (60+), clinic staff (probable medic/counselor/operator)\r\nEMOTIONAL STATE: Moral fatigue; fear of institutional hardening; brief break on “names”\r\nINTENT SUMMARY: Warning against codifying fear into governance; plea to preserve humanity over procedure\r\nTRANSCRIPT (EXCERPT): “I don’t think we’re meant to survive this long. If you’re down there… please don’t let us become instructions. Don’t turn our fear into policy. Don’t turn our names into a procedure.”\r\nANALYSIS NOTE: Subject exhibits long-duration stress and ethical exhaustion, framing survival itself as a distortion that transforms living people into operational doctrine. The repeated imperatives indicate urgency without hysteria; the single vocal break on “names” suggests personal loss beneath professional cadence. Signal shows compression/packet loss consistent with low-priority routing; background monitor chirp supports clinical environment. Call functions as moral deposition into a prohibited channel—an attempt to leave a human boundary marker for systems that outlast humans.\r\nDISPOSITION: Archived (content flagged: governance risk)"
-                                       },
-                                       {
-                                           "id":  "DA_Log_Phone_Test:VoyageLogFragment_6",
-                                           "title":  "INTERCEPT ID: CH-FLT-LEG-0007",
-                                           "description":  "NODE: New Terra / Quiet Bay Comms Spur Q-19\r\nCHANNEL: Outbound / Legacy Dial Attempt\r\nPOLICY FLAG: Non-Essential / Prohibited Endpoint\r\nSUBJECT PROFILE: Adult (30–55), chronic caller (long-term isolation indicators)\r\nEMOTIONAL STATE: Gratitude with sorrow; brief relief event\r\nINTENT SUMMARY: Acknowledges prior “answer” event; thanks unknown endpoint for breaking silence once\r\nTRANSCRIPT (EXCERPT): “This is the last number that ever answered me. I don’t know who you are. I don’t even know if you’re alive. But if you hear this… thank you for once proving the silence can break.”\r\nANALYSIS NOTE: Subject references a historical instance of perceived connection, suggesting either a genuine response, an automated echo, or a misinterpreted routing artifact. The call treats that moment as psychologically sustaining, implying prolonged deprivation of interpersonal feedback. Old-line crackle and slight reverberation indicate transmission from a large, empty space; minimal background sound supports concealment and ritual solitude. This is not a request for contact but an offering of gratitude to the idea that contact might still be possible.\r\nDISPOSITION: Archived (anomaly tag: “answer event”"
-                                       },
-                                       {
-                                           "id":  "DA_Log_Phone_Test:VoyageLogFragment_7",
-                                           "title":  "INTERCEPT ID: CH-FLT-LEG-0008",
-                                           "description":  "NODE: New Terra / Vent Trunk Access Comms Spur V-07\r\nCHANNEL: Outbound / Legacy Dial Attempt\r\nPOLICY FLAG: Non-Essential / Prohibited Endpoint\r\nSUBJECT PROFILE: Adult (~55), “final witness” caller (role unknown)\r\nEMOTIONAL STATE: Stark grief with dignity; no panic, only record-keeping\r\nINTENT SUMMARY: Leaves existence as the message; requests remembrance rather than contact\r\nTRANSCRIPT (EXCERPT): “I don’t know if you’re alive. But if you hear this—please remember that we were here.”\r\nANALYSIS NOTE: Subject uses minimal language and avoids any request for rescue or reply, consistent with late-stage acceptance and collapsed expectation of assistance. Slight dropouts suggest time pressure or concealment; the heavy ventilation hum implies an improvised location near infrastructure rather than a personal cabin. The call functions as a human footprint deposited into forbidden channels: existence asserted in the smallest possible form.\r\nDISPOSITION: Archived (low bandwidth / high significance tag)"
-                                       },
-                                       {
-                                           "id":  "DA_Log_Phone_Test:VoyageLogFragment_8",
-                                           "title":  "INTERCEPT ID: CH-FLT-LEG-0009",
-                                           "description":  "NODE: New Terra / Sleep Pod Cluster C-12\r\nCHANNEL: Outbound / Legacy Dial Attempt\r\nPOLICY FLAG: Non-Essential / Prohibited Endpoint\r\nSUBJECT PROFILE: Child/teen (8–12), dependent resident (family contact attempt)\r\nEMOTIONAL STATE: Longing with controlled fear; bravery performed for self-regulation\r\nINTENT SUMMARY: Seeks identity confirmation via parental voice; requests being named one more time\r\nTRANSCRIPT (EXCERPT): “Mom? They said you might still have this number. I’m not scared, okay? I just wanted to hear you say my name one more time.”\r\nANALYSIS NOTE: Subject demonstrates internalized coping language (“I’m not scared”) indicative of recent comms briefing or anxiety intervention. Breath catch on “my name” suggests emotional overload and strong attachment to identity validation through parental recognition. Clean audio with slight reverb and fabric rustle supports a small enclosed sleep pod environment and covert timing. This is not a policy breach for information transfer; it is a child attempting to stabilize the self by reaching for a voice that defined them.\r\nDISPOSITION: Quarantined (minor welfare flag) / Archived copy retained"
-                                       },
-                                       {
-                                           "id":  "DA_Log_Phone_Test:VoyageLogFragment_9",
-                                           "title":  "INTERCEPT ID: CH-FLT-LEG-0010",
-                                           "description":  "NODE: New Terra / Education Block Comms Spur E-04\r\nCHANNEL: Outbound / Legacy Dial Attempt\r\nPOLICY FLAG: Non-Essential / Prohibited Endpoint\r\nSUBJECT PROFILE: Child (8–10), education-track resident\r\nEMOTIONAL STATE: Hopeful denial with ache; pride under strain\r\nINTENT SUMMARY: Offers proof of growth and normality; seeks approval from imagined caretaker-parent\r\nTRANSCRIPT (EXCERPT): “Dad, it’s me. I know you’re busy down there fixing things. They told us not to call anymore, but… I did my homework. I think you’d be proud.”\r\nANALYSIS NOTE: Subject projects the caretaker as a parental figure (“down there fixing things”), indicating cultural narrative training that frames maintenance labor as paternal care. The mention of homework functions as a bid for continuity—childhood performance offered as evidence of life persisting. Distant class tone at start suggests call placed near scheduled education routines; the wobble on “proud” indicates suppressed distress. This call is a small act of rebellion framed as goodness: disobedience justified by the need to be seen.\r\nDISPOSITION: Archived (education welfare tag)"
                                        },
                                        {
                                            "id":  "DA_Log_Phone_Test:VoyageLogFragment_10",
@@ -2747,6 +2702,51 @@
                                            "id":  "DA_Log_Phone_Test:VoyageLogFragment_19",
                                            "title":  "INTERCEPT ID: CH-FLT-LEG-0020",
                                            "description":  "ODE: New Terra / Residential Canteen Comms Spur C-09\r\nCHANNEL: Outbound / Legacy Dial Attempt\r\nPOLICY FLAG: Non-Essential / Prohibited Endpoint\r\nSUBJECT PROFILE: Adult (20–70), morale-fragile resident (birthday event)\r\nEMOTIONAL STATE: Fragile warmth mixed with humiliation and longing\r\nINTENT SUMMARY: Records a small forbidden human ritual; wishes for ordinary life without enforced bravery\r\nTRANSCRIPT (EXCERPT): “It’s my birthday. They printed my name on a ration wrapper like a joke. Everyone sang quietly so security wouldn’t think it was a gathering. I made a wish anyway. I wished I could be ordinary again, just once—without being brave.”\r\nANALYSIS NOTE: Subject describes celebration as covert activity, indicating heightened security scrutiny of gatherings and the criminalization of harmless joy. The ration-wrapper detail frames identity as reduced to inventory, turning recognition into humiliation. Residual muffled singing suggests the call was placed immediately after a micro-celebration, with the speaker transitioning from collective warmth to solitary confession. This message preserves a small act of humanity under constraint: the desire to be ordinary when systems demand heroism.\r\nDISPOSITION: Archived (low priority / morale tag)"
+                                       },
+                                       {
+                                           "id":  "DA_Log_Phone_Test:VoyageLogFragment_2",
+                                           "title":  "INTERCEPT ID: CH-FLT-LEG-0003",
+                                           "description":  "NODE: New Terra / Maintenance Alcove Line M-11\r\nCHANNEL: Outbound / Legacy Dial Attempt\r\nPOLICY FLAG: Non-Essential / Prohibited Endpoint\r\nSUBJECT PROFILE: Teen/young adult (16–30), unassigned resident (probable low-duty or restricted access)\r\nEMOTIONAL STATE: Fear of confirmation; acute fragility with self-protective restraint\r\nINTENT SUMMARY: Controlled near-contact used to preserve hope without risking verification; request for silence as emotional containment\r\nTRANSCRIPT (EXCERPT): “If you’re still there, please don’t answer. I don’t think I could survive the proof.”\r\nANALYSIS NOTE: Subject’s request for non-response indicates a paradoxical coping strategy: maintaining the possibility of connection while avoiding confirmation that could destabilize them. The phrasing “survive the proof” suggests recent exposure to mental health warnings and internalization of contact as psychologically hazardous. Whisper delivery with long pauses and audible breathing implies concealment and shame; the quiet environment supports a clandestine attempt rather than routine misuse. This is not outreach. It is self-regulation through ritualized almost-communication, consistent with systems that teach citizens to fear their own longing.\r\nDISPOSITION: Quarantined (self-harm risk flag)"
+                                       },
+                                       {
+                                           "id":  "DA_Log_Phone_Test:VoyageLogFragment_3",
+                                           "title":  "INTERCEPT ID: CH-FLT-LEG-0004",
+                                           "description":  "NODE: New Terra / Public Atrium Display Bay A-02\r\nCHANNEL: Outbound / Legacy Dial Attempt\r\nPOLICY FLAG: Non-Essential / Prohibited Endpoint\r\nSUBJECT PROFILE: Adult (25–45), resident/staff; long-tenured (probable clinic/program participant)\r\nEMOTIONAL STATE: Controlled bitterness; grief converted to analysis\r\nINTENT SUMMARY: Documents perceived coercion via “comfort” programming; records dissent in private form\r\nTRANSCRIPT (EXCERPT): “They showed us a simulation of Earth today. Clean skies. Stable oceans. Birds you can’t hear through glass. They said it was ‘for comfort.’ It didn’t feel like comfort. It felt like training us to accept what we’ll never touch again.”\r\nANALYSIS NOTE: Subject frames the simulation as behavioral conditioning rather than relief, indicating advanced skepticism of institutional morale initiatives. Delivery is slow and precise, suggesting emotional containment rather than impulsive distress. Audio begins in a shared space (faint chatter, chair scrape) then transitions to privacy (door closure), consistent with a caller attempting deniable expression under surveillance norms. This call functions as a record of psychological harm performed without visible violence: comfort as compliance training.\r\n DISPOSITION: Archived (content flagged: morale risk)"
+                                       },
+                                       {
+                                           "id":  "DA_Log_Phone_Test:VoyageLogFragment_4",
+                                           "title":  "INTERCEPT ID: CH-FLT-LEG-0005",
+                                           "description":  "NODE: New Terra / Training Quarters Comms Spur T-08\r\nCHANNEL: Outbound / Legacy Dial Attempt\r\nPOLICY FLAG: Non-Essential / Prohibited Endpoint\r\nSUBJECT PROFILE: Older teen/young adult (16–28), training-track resident (probable education/crew pipeline)\r\nEMOTIONAL STATE: Tender seriousness; stable affect with underlying dread\r\nINTENT SUMMARY: Moral reminder intended for an unknown listener; preserves agency language under narrowing choice regimes\r\nTRANSCRIPT (EXCERPT): “If this number belongs to anyone—please don’t forget how it felt to choose. Not the big choices they celebrate. The small ones. To stay. To leave. To turn back. To keep going anyway.”\r\nANALYSIS NOTE: Subject emphasizes lived agency over institutional “celebrated” decisions, implying recent exposure to selection, evaluation, or forced assignment. Tone is calm and deliberate, consistent with reflective cognition and attempted meaning preservation. A slight static swell on the word “choose” suggests either signal instability or heightened system filtering at sensitive phrasing. The call is not seeking response; it is depositing a principle into the void as resistance against procedural life.\r\nDISPOSITION: Archived (low priority)"
+                                       },
+                                       {
+                                           "id":  "DA_Log_Phone_Test:VoyageLogFragment_5",
+                                           "title":  "INTERCEPT ID: CH-FLT-LEG-0006",
+                                           "description":  "NODE: New Terra / Kepler Clinic Comms Spur K-02\r\nCHANNEL: Outbound / Legacy Dial Attempt\r\nPOLICY FLAG: Non-Essential / Prohibited Endpoint\r\nSUBJECT PROFILE: Elder (60+), clinic staff (probable medic/counselor/operator)\r\nEMOTIONAL STATE: Moral fatigue; fear of institutional hardening; brief break on “names”\r\nINTENT SUMMARY: Warning against codifying fear into governance; plea to preserve humanity over procedure\r\nTRANSCRIPT (EXCERPT): “I don’t think we’re meant to survive this long. If you’re down there… please don’t let us become instructions. Don’t turn our fear into policy. Don’t turn our names into a procedure.”\r\nANALYSIS NOTE: Subject exhibits long-duration stress and ethical exhaustion, framing survival itself as a distortion that transforms living people into operational doctrine. The repeated imperatives indicate urgency without hysteria; the single vocal break on “names” suggests personal loss beneath professional cadence. Signal shows compression/packet loss consistent with low-priority routing; background monitor chirp supports clinical environment. Call functions as moral deposition into a prohibited channel—an attempt to leave a human boundary marker for systems that outlast humans.\r\nDISPOSITION: Archived (content flagged: governance risk)"
+                                       },
+                                       {
+                                           "id":  "DA_Log_Phone_Test:VoyageLogFragment_6",
+                                           "title":  "INTERCEPT ID: CH-FLT-LEG-0007",
+                                           "description":  "NODE: New Terra / Quiet Bay Comms Spur Q-19\r\nCHANNEL: Outbound / Legacy Dial Attempt\r\nPOLICY FLAG: Non-Essential / Prohibited Endpoint\r\nSUBJECT PROFILE: Adult (30–55), chronic caller (long-term isolation indicators)\r\nEMOTIONAL STATE: Gratitude with sorrow; brief relief event\r\nINTENT SUMMARY: Acknowledges prior “answer” event; thanks unknown endpoint for breaking silence once\r\nTRANSCRIPT (EXCERPT): “This is the last number that ever answered me. I don’t know who you are. I don’t even know if you’re alive. But if you hear this… thank you for once proving the silence can break.”\r\nANALYSIS NOTE: Subject references a historical instance of perceived connection, suggesting either a genuine response, an automated echo, or a misinterpreted routing artifact. The call treats that moment as psychologically sustaining, implying prolonged deprivation of interpersonal feedback. Old-line crackle and slight reverberation indicate transmission from a large, empty space; minimal background sound supports concealment and ritual solitude. This is not a request for contact but an offering of gratitude to the idea that contact might still be possible.\r\nDISPOSITION: Archived (anomaly tag: “answer event”"
+                                       },
+                                       {
+                                           "id":  "DA_Log_Phone_Test:VoyageLogFragment_7",
+                                           "title":  "INTERCEPT ID: CH-FLT-LEG-0008",
+                                           "description":  "NODE: New Terra / Vent Trunk Access Comms Spur V-07\r\nCHANNEL: Outbound / Legacy Dial Attempt\r\nPOLICY FLAG: Non-Essential / Prohibited Endpoint\r\nSUBJECT PROFILE: Adult (~55), “final witness” caller (role unknown)\r\nEMOTIONAL STATE: Stark grief with dignity; no panic, only record-keeping\r\nINTENT SUMMARY: Leaves existence as the message; requests remembrance rather than contact\r\nTRANSCRIPT (EXCERPT): “I don’t know if you’re alive. But if you hear this—please remember that we were here.”\r\nANALYSIS NOTE: Subject uses minimal language and avoids any request for rescue or reply, consistent with late-stage acceptance and collapsed expectation of assistance. Slight dropouts suggest time pressure or concealment; the heavy ventilation hum implies an improvised location near infrastructure rather than a personal cabin. The call functions as a human footprint deposited into forbidden channels: existence asserted in the smallest possible form.\r\nDISPOSITION: Archived (low bandwidth / high significance tag)"
+                                       },
+                                       {
+                                           "id":  "DA_Log_Phone_Test:VoyageLogFragment_8",
+                                           "title":  "INTERCEPT ID: CH-FLT-LEG-0009",
+                                           "description":  "NODE: New Terra / Sleep Pod Cluster C-12\r\nCHANNEL: Outbound / Legacy Dial Attempt\r\nPOLICY FLAG: Non-Essential / Prohibited Endpoint\r\nSUBJECT PROFILE: Child/teen (8–12), dependent resident (family contact attempt)\r\nEMOTIONAL STATE: Longing with controlled fear; bravery performed for self-regulation\r\nINTENT SUMMARY: Seeks identity confirmation via parental voice; requests being named one more time\r\nTRANSCRIPT (EXCERPT): “Mom? They said you might still have this number. I’m not scared, okay? I just wanted to hear you say my name one more time.”\r\nANALYSIS NOTE: Subject demonstrates internalized coping language (“I’m not scared”) indicative of recent comms briefing or anxiety intervention. Breath catch on “my name” suggests emotional overload and strong attachment to identity validation through parental recognition. Clean audio with slight reverb and fabric rustle supports a small enclosed sleep pod environment and covert timing. This is not a policy breach for information transfer; it is a child attempting to stabilize the self by reaching for a voice that defined them.\r\nDISPOSITION: Quarantined (minor welfare flag) / Archived copy retained"
+                                       },
+                                       {
+                                           "id":  "DA_Log_Phone_Test:VoyageLogFragment_9",
+                                           "title":  "INTERCEPT ID: CH-FLT-LEG-0010",
+                                           "description":  "NODE: New Terra / Education Block Comms Spur E-04\r\nCHANNEL: Outbound / Legacy Dial Attempt\r\nPOLICY FLAG: Non-Essential / Prohibited Endpoint\r\nSUBJECT PROFILE: Child (8–10), education-track resident\r\nEMOTIONAL STATE: Hopeful denial with ache; pride under strain\r\nINTENT SUMMARY: Offers proof of growth and normality; seeks approval from imagined caretaker-parent\r\nTRANSCRIPT (EXCERPT): “Dad, it’s me. I know you’re busy down there fixing things. They told us not to call anymore, but… I did my homework. I think you’d be proud.”\r\nANALYSIS NOTE: Subject projects the caretaker as a parental figure (“down there fixing things”), indicating cultural narrative training that frames maintenance labor as paternal care. The mention of homework functions as a bid for continuity—childhood performance offered as evidence of life persisting. Distant class tone at start suggests call placed near scheduled education routines; the wobble on “proud” indicates suppressed distress. This call is a small act of rebellion framed as goodness: disobedience justified by the need to be seen.\r\nDISPOSITION: Archived (education welfare tag)"
+                                       },
+                                       {
+                                           "id":  "DA_Log_Phone_Test:VoyageLogFragment_0",
+                                           "title":  "INTERCEPT ID: CH-FLT-LEG-0001",
+                                           "description":  "NODE: New Terra / Residential Comms Spur R-14\r\nCHANNEL: Outbound / Legacy Dial Attempt\r\nPOLICY FLAG: Non-Essential / Prohibited Endpoint\r\nSUBJECT PROFILE: Young adult (18–25), new arrival (probable recent evac/crew)\r\nEMOTIONAL STATE: Relief with grief overlay; guilt suppression evident\r\nINTENT SUMMARY: One-way proof-of-life declaration; explicit rejection of reciprocal contact\r\nTRANSCRIPT (EXCERPT): “Dad? …No—sorry. I’m sorry. If someone answers… don’t. I just— I just wanted to say I made it. That’s all. I made it.”\r\nANALYSIS NOTE: Subject opens with parental address then self-corrects, indicating internalized compliance and fear of response. Message functions as a one-way memorial: survival declared, connection refused. The paradox is stable across the clip—seeking reality (“I made it”) while rejecting verification (“don’t answer”)—suggesting hope is being used as sedation rather than communication. Clean signal and monitoring beep imply supervised infrastructure; this was not a clandestine call but a prohibited act occurring inside order.\r\nDISPOSITION: Archived (exception chain incomplete)"
                                        }
                                    ]
                  },
@@ -2757,14 +2757,72 @@
                      "footer":  "",
                      "fragments":  [
                                        {
-                                           "id":  "DA_Log_Protocol_Records:VoyageLogFragment_0",
-                                           "title":  "Entry: Basic Protocol Assimilation",
-                                           "description":  "- Doors: Operational. Manual override procedure or electrical activation logged.\r\n- Objects: Movable. Environmental adjustments confirmed.\r\n- Elevators: Vertical navigation capability verified."
-                                       },
-                                       {
                                            "id":  "DA_Log_Protocol_Records:VoyageLogFragment_1",
                                            "title":  "Entry: Dock Power Restoration Protocols",
                                            "description":  "- Area Main Power: Activated, enabling system-wide illumination and functionality.  \r\n- Repair Tool: Operational; enables on-site maintenance and restoration of damaged modules and items"
+                                       },
+                                       {
+                                           "id":  "DA_Log_Protocol_Records:VoyageLogFragment_0",
+                                           "title":  "Entry: Basic Protocol Assimilation",
+                                           "description":  "- Doors: Operational. Manual override procedure or electrical activation logged.\r\n- Objects: Movable. Environmental adjustments confirmed.\r\n- Elevators: Vertical navigation capability verified."
+                                       }
+                                   ]
+                 },
+                 {
+                     "id":  "DA_Log_56",
+                     "title":  "Elina Voss — Rising Tide",
+                     "description":  "The Last Packets",
+                     "footer":  "",
+                     "fragments":  [
+                                       {
+                                           "id":  "DA_Log_56:VoyageLogFragment_0",
+                                           "title":  "Page 1: “Break Room Champion” — March 3, 1989",
+                                           "description":  "PECO hired me to design “recreational modules,” which is their way of asking me to make games without calling them games. By week two, the terminal floor staff were competing for the best sprint times in my athletics prototype. That was proof enough for me. If exhausted operators keep asking for “one more try” after their shifts end, the software is alive.\n\nAron says I\u0027ve finally found a respectable way to waste people\u0027s time. He still asks me to send him every new build."
+                                       },
+                                       {
+                                           "id":  "DA_Log_56:VoyageLogFragment_1",
+                                           "title":  "Page 2: “North Deep Intake” — October 18, 1990",
+                                           "description":  "Aron wrote me from North Deep Intake again. His message was all about bearings, pump loads, corrosion, intake pressure, and waves constantly battering the platform supports. Somewhere between all those numbers, he remembered to say he misses me.\n\nHis station sits isolated offshore, pulling cleaner deep-ocean water into the MOSES desalination network. Endless sea in every direction, and his job is to make sure people somewhere else can drink.\n\nHe says the ocean doesn\u0027t look dangerous until you measure what it\u0027s actually doing. That\u0027s Aron. He trusts numbers more than instinct.\n\nI trust Aron."
+                                       },
+                                       {
+                                           "id":  "DA_Log_56:VoyageLogFragment_2",
+                                           "title":  "Page 3: “Deferred” — May 9, 1991",
+                                           "description":  "Aron sent me copies of his repair requests. All marked DEFERRED.\n\nNot denied. Deferred. It\u0027s a more professional way to say “later” until later becomes pointless.\n\nHe complains about pump bearings being overdue, intake screens wearing out, and replacement motors getting delayed again. MOSES keeps rescheduling structural reinforcement to the next maintenance cycle.\n\nAron believes they\u0027ll send the parts. I asked when. He sent me the allocation number.\n\nThat wasn\u0027t what I asked."
+                                       },
+                                       {
+                                           "id":  "DA_Log_56:VoyageLogFragment_3",
+                                           "title":  "Page 4: “A Shape You Can Play” — January 14, 1992",
+                                           "description":  "I began work on the prototype today.\n\nCore ideas:\nBuild upward.\nSpend carefully.\nIncome arrives late.\nWide foundations buy time.\nGaps destroy what looks stable.\n\nI told the team it was a systems game about pressure and planning. That was true; I just didn\u0027t tell them whose system it was based on."
+                                       },
+                                       {
+                                           "id":  "DA_Log_56:VoyageLogFragment_4",
+                                           "title":  "Page 5: “The Fun Pass” — April 27, 1992",
+                                           "description":  "The prototype “feels good.” Blocks drop clean. The economy hurts at the right time. The warning creates panic exactly where it should."
+                                       },
+                                       {
+                                           "id":  "DA_Log_56:VoyageLogFragment_5",
+                                           "title":  "Page 6: “Consumer Build” — September 2, 1992",
+                                           "description":  "PECO approved the cartridge.\n\nRISING TIDE // MOSES EMERGENCY\n\nThey liked the title. Urgent, but still something you can sell. I wrote the packaging copy myself to make it sound more like entertainment. People will probably think my “recreational module” is clever, maybe even addictive. I know it\u0027s hard, but fair."
+                                       },
+                                       {
+                                           "id":  "DA_Log_56:VoyageLogFragment_6",
+                                           "title":  "Page 7: “Three Days” — September 14, 1993",
+                                           "description":  "Aron got three days away from North Deep Intake. We spent most of the first day in bed sleeping. On the second, we started looking at places we might live when his assignment ended.\n\nHe found one place with three bedrooms.\n“Three?” I asked. “What are we going to do with three?”\n\nHe shrugged. “Leave one for later.”\n\nOn the third morning, Aron went back to North Deep Intake."
+                                       },
+                                       {
+                                           "id":  "DA_Log_56:VoyageLogFragment_7",
+                                           "title":  "Page 8: “Last Good Signal” — February 6, 1994",
+                                           "description":  "His messages have changed lately. More numbers. Fewer jokes.\n\nIn November, buried among pressure values and surge readings, he wrote:\nWhen the alarms are finally accurate, it will already be too late.\n\nI kept that line pinned to my monitor.\n\nToday\u0027s packet wasn\u0027t really a message at all. It was an automated emergency transmission copied to every maintenance recipient still listening.\n\nIntake obstruction. Pump restart. Motor overload. Pressure loss. Water entering the lower service deck. Second pump unavailable.\n\nNothing followed.\n\nI eventually learned North Deep Intake didn\u0027t fail all at once. It failed through postponed repairs, missing parts, overloaded machinery, and decisions that looked harmless from the perspective of somewhere else.\n\nThat night, I changed Rising Tide."
+                                       },
+                                       {
+                                           "id":  "DA_Log_56:VoyageLogFragment_8",
+                                           "title":  "Page 9: “Telemetry” — March 21, 1994",
+                                           "description":  "A PECO analyst told me MOSES was requesting the full Rising Tide telemetry set. Apparently the countless simulations run by our players had produced useful hesitation curves, risk tolerances, recovery times after warning states, and measurements of how long people kept trying once the system turned against them.\n\nMOSES called it behavioral training data. I looked at the graphs. All I could see was Aron.\n\nNot his face or his voice. His final hours, cleaned up and anonymized. Made useful.\n\nThat\u0027s what MOSES does with grief. It finds the part with training value.\n\nI resigned today. There\u0027s still one place I need to go."
+                                       },
+                                       {
+                                           "id":  "DA_Log_56:VoyageLogFragment_9",
+                                           "title":  "Page 10: “Below the Line” — 1994",
+                                           "description":  "Months since I last saw Aron. North Deep Intake was still standing, barely. I searched the flooded decks and his cabin even though I knew I would not find him.\n\nThere was only a piece of paper in his handwriting.\n\nI read it and sat there for a long time. I kept thinking about those three days together, all the things we talked about doing afterward, and how certain we both were that there would be an afterward.\n\nThen I wrote beneath his words:\nThere was.\nJust not for you.\nOur daughter is coming.\n\nYou would have loved her."
                                        }
                                    ]
                  }

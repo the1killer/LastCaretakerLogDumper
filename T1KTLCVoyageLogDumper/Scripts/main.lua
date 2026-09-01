@@ -272,7 +272,7 @@ end
 local function dumpVoyageMazeRoomNumbers()
     print("[T1KTLCVoyageLogDumper] Dumping voyage maze room numbers...\n")
     -- local voyageLocations = FindAllOf("VoyageLocation")
-    local roomNumbers = FindAllOf("BP_Maze_RoomNumber_C")
+    local roomNumbers = FindAllOf("BP_Maze_RoomNumber_C") or {}
     local dump = {}
     print(string.format("[T1KTLCVoyageLogDumper] Found %d room numbers\n", #roomNumbers))
 
@@ -371,7 +371,7 @@ end
 
 local function dumpVoyageSampleDataText()
     print("[T1KTLCVoyageLogDumper] Dumping sample data text...\n")
-    local assets = FindAllOf("VoyageSampleDataAsset")
+    local assets = FindAllOf("VoyageSampleDataAsset") or {}
     local dump = {}
     for _, asset in ipairs(assets) do
         table.insert(dump, {
@@ -461,7 +461,7 @@ local function dumpVoyageSampleDataImages()
     end
 
     local outDir = "sampledata_images\\"
-    local assets = FindAllOf("VoyageSampleDataAsset")
+    local assets = FindAllOf("VoyageSampleDataAsset") or {}
     local ok, total = 0, 0
 
     for _, asset in ipairs(assets) do
@@ -479,8 +479,69 @@ local function dumpVoyageSampleDataImages()
     print(string.format("[T1KTLCVoyageLogDumper] Exported %d/%d sample data thumbnails to %s\n", ok, total, outDir))
 end
 
--- Register key bind for Control + F3
--- RegisterKeyBind(Key.F3, { ModifierKey.CONTROL }, function()
+local function dumpVoyageQuestSubtitles()
+    print("[T1KTLCVoyageLogDumper] Dumping quest subtitles...\n")
+    -- Preload known voiceover sound wave packages
+    local prefixes = {
+        "/Game/Audio/VO/Quests/",
+        "/Game/Audio/VO/CU3/",
+        "/Game/Audio/VO/Dialogs/",
+        "/Game/Audio/VO/",
+        "/Game/LocalizationStringTables/"
+    }
+    
+    LoadAsset("/Game/LocalizationStringTables/ST_VoiceOver.ST_VoiceOver")
+    LoadAsset("/Game/LocalizationStringTables/ST_Dialogs.ST_Dialogs")
+
+    for q = 1, 30 do
+        for s = 1, 15 do
+            local name = string.format("SW_Quest_VO_%d-%d", q, s)
+            LoadAsset("/Game/Audio/VO/Quests/" .. name .. "." .. name)
+        end
+    end
+    for q = 1, 10 do
+        for s = 1, 10 do
+            local name = string.format("CU3_%d-%d", q, s)
+            LoadAsset("/Game/Audio/VO/CU3/" .. name .. "." .. name)
+        end
+    end
+
+    local allSoundWaves = FindAllOf("SoundWave") or {}
+    local dump = {}
+    local seen = {}
+
+    for _, sw in ipairs(allSoundWaves) do
+        local name = sw:GetFName():ToString()
+        if not seen[name] then
+            seen[name] = true
+            local duration = sw.Duration or 0.0
+            local subText = ""
+            if sw.Subtitles and #sw.Subtitles > 0 then
+                subText = sw.Subtitles[1].Text and sw.Subtitles[1].Text:ToString() or ""
+            end
+            if subText ~= "" or duration > 0 then
+                table.insert(dump, {
+                    Name = name,
+                    Duration = duration,
+                    Subtitle = subText
+                })
+            end
+        end
+    end
+
+    table.sort(dump, function(a, b)
+        return (a.Name or "") < (b.Name or "")
+    end)
+
+    local file = io.open("voyage_quest_subtitles_dump.json", "w")
+    if file then
+        file:write(toJSON(dump, "  ", { "Name", "Duration", "Subtitle" }))
+        file:close()
+        print(string.format("[T1KTLCVoyageLogDumper] Dumped %d quest subtitles to voyage_quest_subtitles_dump.json\n", #dump))
+    else
+        print("[T1KTLCVoyageLogDumper] Failed to open file for writing\n")
+    end
+end
 
 -- Register key bind for F2
 RegisterKeyBind(Key.F2, { }, function()
@@ -506,3 +567,16 @@ RegisterKeyBind(Key.F4, { }, function()
     end)
 end)
 
+-- Register key bind for F5: export Quest Subtitles
+RegisterKeyBind(Key.F5, { }, function()
+    ExecuteInGameThread(function()
+        dumpVoyageQuestSubtitles()
+    end)
+end)
+
+print("[T1KTLCVoyageLogDumper] Mod loaded successfully! Keybinds active: F2, F3, F4, F5.\n")
+
+
+
+-- Register key bind for Control + F3
+-- RegisterKeyBind(Key.F3, { ModifierKey.CONTROL }, function()
