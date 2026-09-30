@@ -6,6 +6,10 @@ A UE4SS mod for *The Last Caretaker* that extracts voyage log data from the game
 
 This mod allows you to dump all voyage logs and their associated fragments from *The Last Caretaker* game into a structured JSON file. This is useful for documentation, modding reference, or data analysis purposes.
 
+Thanks to [@schacherle](https://github.com/schacherle) for the amazing log viewer, and work on collecting the samples:
+
+Online Log Viewer: [https://the1killer.github.io/LastCaretakerLogDumper/](https://the1killer.github.io/LastCaretakerLogDumper/)
+
 ## Features
 
 - **Extract Voyage Logs**: Retrieves all `VoyageLogData` objects from the game
