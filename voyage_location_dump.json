@@ -1,5 +1,5 @@
 {
-    "build_number": "Early Access - 0.8.5.650920",
+    "build_number": "Early Access - 0.10.0.653002",
     "data": [
       {
         "id": "UnlistedTower",
@@ -964,7 +964,7 @@
         "group": "NavigationBeacon49",
         "x": 337689.91364664,
         "y": 66490.156455813,
-        "z": 981.95456647248,
+        "z": 0.0,
         "class": "VoyageLocatorActor_UAID_C87F5407A527BB4502_ec14bdcf4d40dc89_1254186590",
         "lon": 34.201807835674,
         "lat": 6.3226438178957
@@ -990,6 +990,28 @@
         "class": "VoyageLocatorActor_UAID_C87F5407A5520BC402_8f04c4dbd228d63d_1699974632",
         "lon": 169.33752540911,
         "lat": -1.5253295949439
+      },
+      {
+        "id": "ArchSnowBiome",
+        "title": "North Bastion Transfer Gate",
+        "group": "ArchSnowBiome",
+        "x": 534337.87426286,
+        "y": -10114989.631672,
+        "z": 79.999861793325,
+        "class": "VoyageLocatorActor_UAID_C87F5407A552110503_ddbacccfb97bbb92_2099208223",
+        "lon": 53.876935186232,
+        "lat": -1012.0144919219
+      },
+      {
+        "id": "NorthBastion",
+        "title": "North Bastion",
+        "group": "NorthBastion",
+        "x": 544492.15135474,
+        "y": -10189985.346046,
+        "z": 80.0,
+        "class": "VoyageLocatorActor_UAID_C87F5407A552120503_c651fe3b9d070afb_1866108769",
+        "lon": 54.892896370419,
+        "lat": -1019.5154566695
       },
       {
         "id": "Statue_Spire_C",
@@ -1047,6 +1069,17 @@
         "lat": -15.364901804795
       },
       {
+        "id": "GyrocopyterPlatformK",
+        "title": "SGS-S-94-13021",
+        "group": "GyrocopyterPlatformK",
+        "x": 629974.33483671,
+        "y": 1295117.5659344,
+        "z": 3400.9587711312,
+        "class": "VoyageLocatorActor_UAID_C87F5407A55288D602_0ce8faf7188d986c_1774574493",
+        "lon": 63.445605693928,
+        "lat": 129.20821085686
+      },
+      {
         "id": "GyrocopyterPlatformF",
         "title": "SGS-NE-115-4600",
         "group": "GyrocopyterPlatformF",
@@ -1056,6 +1089,28 @@
         "class": "VoyageLocatorActor_UAID_C87F5407A55288D602_310ddec34cacf7c1_1774574493",
         "lon": 90.617003015419,
         "lat": -42.967325454008
+      },
+      {
+        "id": "GyrocopyterPlatformH",
+        "title": "SGS-SW-72-6800",
+        "group": "GyrocopyterPlatformH",
+        "x": 121082.18630304,
+        "y": 327266.41593915,
+        "z": -1.0302869668521e-13,
+        "class": "VoyageLocatorActor_UAID_C87F5407A55288D602_48a1353fc2253525_1774574493",
+        "lon": 12.529655186617,
+        "lat": 32.405114605773
+      },
+      {
+        "id": "GyrocopyterPlatformL",
+        "title": "SGS-E-96-11400",
+        "group": "GyrocopyterPlatformL",
+        "x": 1828477.368375,
+        "y": 151617.07780498,
+        "z": 3660.0839685292,
+        "class": "VoyageLocatorActor_UAID_C87F5407A55288D602_7ae788447efe439d_1774574493",
+        "lon": 183.35887477134,
+        "lat": 14.836917485869
       },
       {
         "id": "GyrocopyterPlatformA",
@@ -1089,6 +1144,28 @@
         "class": "VoyageLocatorActor_UAID_C87F5407A55288D602_a4ca8e0040b9b7cd_1774574493",
         "lon": 77.798378425012,
         "lat": -15.258127694492
+      },
+      {
+        "id": "GyrocopyterPlatformM",
+        "title": "SGS-W-96-8537",
+        "group": "GyrocopyterPlatformM",
+        "x": -149387.18505485,
+        "y": -90322.631625037,
+        "z": 3600.9587711312,
+        "class": "VoyageLocatorActor_UAID_C87F5407A55288D602_c212b0b681625043_1774574493",
+        "lon": -14.531491591698,
+        "lat": -9.3615483412674
+      },
+      {
+        "id": "GyrocopyterPlatformJ",
+        "title": "SGS-SE-101-7200",
+        "group": "GyrocopyterPlatformJ",
+        "x": 1101712.8149451,
+        "y": 578477.36837496,
+        "z": 4100.9587711312,
+        "class": "VoyageLocatorActor_UAID_C87F5407A55288D602_f3ba6e61aff2a250_1774574493",
+        "lon": 110.64423741738,
+        "lat": 57.530876979555
       },
       {
         "id": "GyrocopyterPlatformE",
@@ -1146,6 +1223,17 @@
         "lat": -37.69305253686
       },
       {
+        "id": "ManifestTower",
+        "title": "Manifest Tower",
+        "group": "ManifestTower",
+        "x": 1550682.9826591,
+        "y": -412724.2545873,
+        "z": 1912.9054720498,
+        "class": "VoyageLocatorActor_UAID_C87F5407A552F0F602_dd11c8bcd2a64ee4_1336933924",
+        "lon": 155.56484172313,
+        "lat": -41.607700385698
+      },
+      {
         "id": "Platform_Omega",
         "title": "Platform Omega",
         "group": "Platform_Omega",
@@ -1168,6 +1256,17 @@
         "lat": 58.440046268293
       },
       {
+        "id": "Aron_Station",
+        "title": "North Deep Intake Station",
+        "group": "Aron_Station",
+        "x": 658198.694125,
+        "y": -1360226.4194915,
+        "z": 246.4309648512,
+        "class": "VoyageLocatorActor_UAID_C87F5407A552FCF602_8aefd322ff51d62c_1210217684",
+        "lon": 66.269524445208,
+        "lat": -136.37552007346
+      },
+      {
         "id": "SiloB",
         "title": "MCV-17 Dead Breath",
         "group": "SiloB",
@@ -1179,15 +1278,26 @@
         "lat": -74.488834182547
       },
       {
-        "id": "Mainboat",
-        "title": "Boat",
-        "group": "Player",
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0,
-        "class": "BP_Boat_Barge_C970",
-        "lon": 0.41507526455253,
-        "lat": -0.32760711704793
+        "id": "NorthBastion",
+        "title": "North Bastion Transfer Gate",
+        "group": "Portals",
+        "x": 534751.60255663,
+        "y": -10110194.872945,
+        "z": 1881.5162575515,
+        "class": "BP_Portal_Logic_C_UAID_ECE7A7118920970103_ddbacccfb97bbb92_1646500058",
+        "lon": 53.918329751641,
+        "lat": -1011.5349269697
+      },
+      {
+        "id": "Lazarus",
+        "title": "Lazarus Complex Transfer Gate",
+        "group": "Portals",
+        "x": 690580.39622587,
+        "y": -16691.745096244,
+        "z": 12881.318450853,
+        "class": "BP_Portal_Logic_C_UAID_ECE7A7118920980103_7f6d9285609602c5_1638611484",
+        "lon": 69.50939589196,
+        "lat": -1.9970917347583
       },
       {
         "id": "You",
@@ -1199,72 +1309,6 @@
         "class": "BP_FirstPersonCharacter_New_C1",
         "lon": 0.41507526455253,
         "lat": -0.32760711704793
-      },
-      {
-        "id": "GyrocopyterPlatformK",
-        "title": "SGS-SE-101-7200",
-        "group": "GyrocopyterPlatformK",
-        "x": 629974.33483671,
-        "y": 1295117.5659344,
-        "z": 3400.9587711312,
-        "class": "VoyageLocatorActor_UAID_C87F5407A55288D602_0ce8faf7188d986c_1774574493",
-        "lon": 63.445605693928,
-        "lat": 129.20821085686
-      },
-      {
-        "id": "GyrocopyterPlatformL",
-        "title": "SGS-E-96-11400",
-        "group": "GyrocopyterPlatformL",
-        "x": 1828477.368375,
-        "y": 151617.07780498,
-        "z": 3660.0839685292,
-        "class": "VoyageLocatorActor_UAID_C87F5407A55288D602_7ae788447efe439d_1774574493",
-        "lon": 183.35887477134,
-        "lat": 14.836917485869
-      },
-      {
-        "id": "GyrocopyterPlatformM",
-        "title": "SGS-W-96-8537",
-        "group": "GyrocopyterPlatformM",
-        "x": -149387.18505485,
-        "y": -90322.631625037,
-        "z": 3600.9587711312,
-        "class": "VoyageLocatorActor_UAID_C87F5407A55288D602_c212b0b681625043_1774574493",
-        "lon": -14.531491591698,
-        "lat": -9.3615483412674
-      },
-      {
-        "id": "GyrocopyterPlatformJ",
-        "title": "SGS-SE-101-7200",
-        "group": "GyrocopyterPlatformJ",
-        "x": 1101712.8149451,
-        "y": 578477.36837496,
-        "z": 4100.9587711312,
-        "class": "VoyageLocatorActor_UAID_C87F5407A55288D602_f3ba6e61aff2a250_1774574493",
-        "lon": 110.64423741738,
-        "lat": 57.530876979555
-      },
-      {
-        "id": "ManifestTower",
-        "title": "Manifest Tower",
-        "group": "ManifestTower",
-        "x": 1550682.9826591,
-        "y": -412724.2545873,
-        "z": 1912.9054720498,
-        "class": "VoyageLocatorActor_UAID_C87F5407A552F0F602_dd11c8bcd2a64ee4_1336933924",
-        "lon": 155.56484172313,
-        "lat": -41.607700385698
-      },
-      {
-        "id": "Aron_Station",
-        "title": "North Deep Intake Station",
-        "group": "Aron_Station",
-        "x": 658198.694125,
-        "y": -1360226.4194915,
-        "z": 246.4309648512,
-        "class": "VoyageLocatorActor_UAID_C87F5407A552FCF602_8aefd322ff51d62c_1210217684",
-        "lon": 66.269524445208,
-        "lat": -136.37552007346
       }
     ]
-}
+  }
