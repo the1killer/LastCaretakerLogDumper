@@ -53,7 +53,13 @@ foreach ($file in $jsonFiles) {
 Write-Host "Extracted $($results.Count) record(s) from $($jsonFiles.Count) file(s)."
 
 if ($OutputFile) {
-    $results | ConvertTo-Json -Depth 5 | Set-Content -Path $OutputFile -Encoding UTF8
+    $json = $results | ConvertTo-Json -Depth 5
+    $json = $json -replace '\\u0027', "'"
+    $json = $json -replace "’", "'"
+    $json = $json -replace "\u2019", "'"
+    $json = $json -replace '\\u0026', "&"
+    
+    Set-Content -Path $OutputFile -Value $json -Encoding UTF8
     Write-Host "Results saved to: $OutputFile"
 } else {
     $results | ConvertTo-Json -Depth 5
