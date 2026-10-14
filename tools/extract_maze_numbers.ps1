@@ -14,23 +14,6 @@ param(
     [bool]$UseCue4Parse = $true
 )
 
-if($UseCue4Parse) {
-    # https://github.com/joric/CUE4Parse.CLI
-    # cue4parse.exe -i "C:\Program Files (x86)\Steam\steamapps\common\Voyage\Voyage\Content\Paks" -p "Voyage/Content/Maps/VoyageWorld2/_Generated_/BTNG5AVC8BRSKAVK26CN42D8D.umap" -f json -m Mappings.usmap
-    $Cue4ParsePath = [System.Environment]::ExpandEnvironmentVariables($Cue4ParsePath);
-    if(-Not (Test-Path $Cue4ParsePath)) {
-        Write-Error "CUE4Parse executable not found at $Cue4ParsePath"
-        exit 1
-    }
-    Write-Host "Extracting via CUE4Parse... takes 5-8 min...\n"
-    $DataPath = (Join-Path -Path (Get-Location) -ChildPath "tempdata")
-    & $Cue4ParsePath -i "$GamePath\Content\Paks" -y -p "Voyage/Content/Maps/VoyageWorld2/_Generated_/BTNG5AVC8BRSKAVK26CN42D8D.umap" -p "Voyage/Content/Maps/VoyageWorld2/_Generated_/5TF4A0F0ZHMO6BIX2MHR52922.umap" -f json -m "$GamePath\Binaries\Win64\Mappings.usmap" -o $DataPath
-    Write-Host "Data extracted to $DataPath"
-    # strip filename off path
-    $DataPath = (Join-Path -Path $DataPath -ChildPath "Voyage\Content\Maps\VoyageWorld2\_Generated_")
-}
-
-
 function Get-ExecutableBuildNumber {
     param([Parameter(Mandatory)][string]$ExecutablePath)
 
@@ -93,11 +76,26 @@ if (-not (Test-Path -LiteralPath $exe_file)) {
 $buildNumber = Get-ExecutableBuildNumber -ExecutablePath $exe_file
 if ($null -eq $buildNumber) {
     Write-Host "Pattern not found in $exe_file"
+    $buildNumber = "Fmodel Export"
 } else {
     Write-Host "Resolved build number: $buildNumber"
 }
 
-
+if($UseCue4Parse) {
+    # https://github.com/joric/CUE4Parse.CLI
+    # cue4parse.exe -i "C:\Program Files (x86)\Steam\steamapps\common\Voyage\Voyage\Content\Paks" -p "Voyage/Content/Maps/VoyageWorld2/_Generated_/BTNG5AVC8BRSKAVK26CN42D8D.umap" -f json -m Mappings.usmap
+    $Cue4ParsePath = [System.Environment]::ExpandEnvironmentVariables($Cue4ParsePath);
+    if(-Not (Test-Path $Cue4ParsePath)) {
+        Write-Error "CUE4Parse executable not found at $Cue4ParsePath"
+        exit 1
+    }
+    Write-Host "Extracting via CUE4Parse... takes 5-8 min...`n"
+    $DataPath = (Join-Path -Path (Get-Location) -ChildPath "tempdata")
+    & $Cue4ParsePath -i "$GamePath\Content\Paks" -y -p "Voyage/Content/Maps/VoyageWorld2/_Generated_/BTNG5AVC8BRSKAVK26CN42D8D.umap" -p "Voyage/Content/Maps/VoyageWorld2/_Generated_/5TF4A0F0ZHMO6BIX2MHR52922.umap" -f json -m "$GamePath\Binaries\Win64\Mappings.usmap" -o $DataPath
+    Write-Host "Data extracted to $DataPath"
+    # strip filename off path
+    $DataPath = (Join-Path -Path $DataPath -ChildPath "Voyage\Content\Maps\VoyageWorld2\_Generated_")
+}
 
 # Room label lookup - maps instance IDs to room labels (from main.lua)
 $maze_room_data = @{
@@ -260,9 +258,9 @@ Write-Host "Extracted $($dump.Count) maze room number entries."
 $outputPath = Join-Path $PSScriptRoot "voyage_maze_numbers_dump_test.json"
 
 # Build ordered output matching the Lua script's key order
+# build_number = "FModel Export"
 $outputData = [ordered]@{
-    # build_number = "FModel Export"
-    build_number = $build_number
+    build_number = $buildNumber.ToString()
     data         = @($dump | ForEach-Object {
         [ordered]@{
             id    = $_.id
