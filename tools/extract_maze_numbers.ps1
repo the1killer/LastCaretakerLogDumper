@@ -31,6 +31,73 @@ if($UseCue4Parse) {
 }
 
 
+function Get-ExecutableBuildNumber {
+    param([Parameter(Mandatory)][string]$ExecutablePath)
+
+    $pattern = "CC CC CC CC B8 ** ** ** ** C3 CC CC CC CC CC CC CC CC CC"
+    $patternBytes = @($pattern -split '\s+' | ForEach-Object {
+        if ($_ -eq '**') { -1 } else { [Convert]::ToInt32($_, 16) }
+    })
+    $exeBytes = [System.IO.File]::ReadAllBytes($ExecutablePath)
+    $anchorPatternIndex = -1
+    for ($index = 0; $index -lt $patternBytes.Count; $index++) {
+        if ($patternBytes[$index] -ge 0) {
+            if ($anchorPatternIndex -lt 0) { $anchorPatternIndex = $index }
+            if ($patternBytes[$index] -ne 0xCC) {
+                $anchorPatternIndex = $index
+                break
+            }
+        }
+    }
+
+    # pattern would match multiple things, noticed the build number would always occur at a fixed distance from the first match, so search based on that
+    $anchorByte = [byte]$patternBytes[$anchorPatternIndex]
+    $searchFrom = 0
+    $repeatValueDisplacement = 0xB1
+    while ($searchFrom -lt $exeBytes.Length) {
+        $anchorOffset = [Array]::IndexOf($exeBytes, $anchorByte, $searchFrom)
+        if ($anchorOffset -lt 0) { break }
+        $searchFrom = $anchorOffset + 1
+        $matchOffset = $anchorOffset - $anchorPatternIndex
+        if ($matchOffset -lt 0 -or $matchOffset + $patternBytes.Count -gt $exeBytes.Length) { continue }
+
+        $isMatch = $true
+        for ($index = 0; $index -lt $patternBytes.Count; $index++) {
+            if ($patternBytes[$index] -ge 0 -and $exeBytes[$matchOffset + $index] -ne $patternBytes[$index]) {
+                $isMatch = $false
+                break
+            }
+        }
+        if ($isMatch) {
+            $buildNumber = [BitConverter]::ToUInt32($exeBytes, $matchOffset + 5)
+            if ($buildNumber -lt 10000 -or $buildNumber -gt 999999) { continue }
+
+            $repeatValueOffset = $matchOffset + 5 + $repeatValueDisplacement
+            if ($repeatValueOffset -gt ($exeBytes.Length - 4) -or
+                $exeBytes[$repeatValueOffset - 1] -ne 0xBA -or
+                [BitConverter]::ToUInt32($exeBytes, $repeatValueOffset) -ne $buildNumber) { continue }
+
+            return [uint32]$buildNumber
+        }
+    }
+
+    return $null
+}
+
+$exe_file = "$GamePath\Binaries\Win64\VoyageSteam-Win64-Shipping.exe"
+if (-not (Test-Path -LiteralPath $exe_file)) {
+    Write-Error "Game executable not found at $exe_file"
+    exit 1
+}
+
+$buildNumber = Get-ExecutableBuildNumber -ExecutablePath $exe_file
+if ($null -eq $buildNumber) {
+    Write-Host "Pattern not found in $exe_file"
+} else {
+    Write-Host "Resolved build number: $buildNumber"
+}
+
+
 
 # Room label lookup - maps instance IDs to room labels (from main.lua)
 $maze_room_data = @{
@@ -194,7 +261,8 @@ $outputPath = Join-Path $PSScriptRoot "voyage_maze_numbers_dump_test.json"
 
 # Build ordered output matching the Lua script's key order
 $outputData = [ordered]@{
-    build_number = "FModel Export"
+    # build_number = "FModel Export"
+    build_number = $build_number
     data         = @($dump | ForEach-Object {
         [ordered]@{
             id    = $_.id
