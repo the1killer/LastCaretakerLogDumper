@@ -1,5 +1,5 @@
 ﻿{
-    "build_number":  "Early Access - 0.10.0.653002",
+    "build_number":  "Early Access - 0.10.0.653173",
     "data":  [
                  {
                      "id":  "DA_Log_1",
@@ -2851,6 +2851,195 @@
                                            "id":  "DA_Log_70:VoyageLogFragment_9",
                                            "title":  "Final Word",
                                            "description":  "Äiti."
+                                       }
+                                   ]
+                 },
+                 {
+                     "id":  "DA_Log_71",
+                     "title":  "OSKAR VALE",
+                     "description":  "North Bastion Star Child Observation Record",
+                     "footer":  "",
+                     "fragments":  [
+                                       {
+                                           "id":  "DA_Log_71:VoyageLogFragment_0",
+                                           "title":  "Age 0.5 — Chamber Entry",
+                                           "description":  "Oskar Vale was placed in Development Chamber NB-MED-7 at six months of age. One Caretaker unit was sealed inside with him and assigned responsibility for feeding, hygiene, physical development, education, healthcare, and emergency intervention. Food, water, clothing, medicine, books, toys, and test materials could enter only through the sealed transfer system. Once isolation was confirmed, no personnel were permitted to enter the chamber. Interaction was limited to one hour per day through the observation system.\n\nVale cried for 47 minutes after separation. The Caretaker picked him up after three minutes and held him until his respiration and heart rate returned to baseline. No instruction required continued physical contact, so the unit put him down after he fell asleep."
+                                       },
+                                       {
+                                           "id":  "DA_Log_71:VoyageLogFragment_1",
+                                           "title":  "Age 1.1 — Ahead",
+                                           "description":  "Vale\u0027s language and reasoning have accelerated significantly beyond normal human development. He now understands complex multi-stage explanations, identifies contradictions between separate research sessions, and remembers experimental conditions beyond the current test interval.\n\nDuring today\u0027s assessment, researchers repeated a previous problem while changing one hidden condition. Vale identified the alteration immediately. When told that the exercise was testing memory, he said his memory was not being tested because he remembered all details of the original problem accurately. He then described the variable that had been changed and commented that changing a hidden variable wasn\u0027t consistent with an intention to test memory.\n\nLater he asked the Caretaker why adults sometimes gave him explanations simpler than the things they already knew he understood. The Caretaker said humans often simplify information for children.\n\nVale replied, “Then they are doing it for themselves.”"
+                                       },
+                                       {
+                                           "id":  "DA_Log_71:VoyageLogFragment_2",
+                                           "title":  "Age 1.8 — Primary Attachment",
+                                           "description":  "Vale continues to demonstrate beyond-adult reasoning in several tested domains while retaining the physical and emotional needs of a child under two. When frightened, injured, tired, or presented with unfamiliar medical equipment, he seeks the Caretaker.\n\nA proposal was submitted to temporarily replace the assigned Caretaker and measure whether Vale\u0027s attachment could transfer to another unit. The proposal was rejected because introducing a second Caretaker would add an uncontrolled developmental variable. During the next evaluation session, Vale asked whether the researchers had considered taking the Caretaker away. No answer was given."
+                                       },
+                                       {
+                                           "id":  "DA_Log_71:VoyageLogFragment_3",
+                                           "title":  "Age 2.4 — The Glass",
+                                           "description":  "Vale has determined that the west wall isn\u0027t a mirror. He cited acoustic response, thermal gradient, reflection behavior, and changes in the Caretaker\u0027s eye orientation during observation periods. He concluded that an occupied space existed behind the glass and estimated its depth to be approximately 2.6 meters.\n\nActual measured depth: 2.8 meters.\n\nVale asked whether anyone was standing there. No answer was authorized. He studied the glass for several minutes, then looked directly toward Observation Position 2 and said, “Three.”\n\nThree observers were present."
+                                       },
+                                       {
+                                           "id":  "DA_Log_71:VoyageLogFragment_4",
+                                           "title":  "Age 2.9 — Unassigned Work",
+                                           "description":  "Vale has progressed far beyond the mathematical material assigned to him. He now routinely derives information from secondary material rather than direct instruction. Problems intended to occupy him for days are completed in hours.\n\nTo study his dependence on written notation, access to paper was reduced. When it ran out, Vale removed a small metal fastener from a learning device and began scratching equations directly into the wall. The markings were left in place."
+                                       },
+                                       {
+                                           "id":  "DA_Log_71:VoyageLogFragment_5",
+                                           "title":  "Age 3.2 — The Room",
+                                           "description":  "Mathematical notation now covers substantial portions of the chamber. Vale has modeled air circulation, supply deliveries, the Caretaker\u0027s charging schedule, staff observation periods, room geometry, hidden service routes, and vibration from machinery he has never seen.\n\nOne drawing predicts the location of a coolant conduit behind the north wall to within eighteen centimeters. Vale has never been shown the chamber schematics. When a researcher described the result as exceptional, Vale replied, “Exceptional means your prediction models are poor.”"
+                                       },
+                                       {
+                                           "id":  "DA_Log_71:VoyageLogFragment_6",
+                                           "title":  "Age 3.4 — Stars",
+                                           "description":  "Vale interrupted his work and reported seeing bright points move across his visual field. The Caretaker checked the chamber lighting and found no fault. Vale closed his eyes and continued describing their movement.\n\nNeurological imaging identified constellation-like abnormalities in the brainstem and adjacent white matter consistent with previous Gold Standard degeneration. The scan results weren\u0027t disclosed. During the next medical session, Vale asked why pupil tracking, swallowing tests, respiratory monitoring, motor-latency testing, and nerve-conduction checks had all increased at the same time. The supervising physician told him routine monitoring had been expanded.\n\nVale thought for a moment and said, “The stars are neurological damage.” No member of the research team had used that term where he could hear it."
+                                       },
+                                       {
+                                           "id":  "DA_Log_71:VoyageLogFragment_7",
+                                           "title":  "Age 3.7 — Self-Diagnosis",
+                                           "description":  "Vale requested access to his medical records. The request was denied. He then reconstructed much of the relevant data from memory and from his own observations. He spent several hours each day tracking changes in his own motor control, tremors, visual artifacts, swallowing latency, speech, and peripheral responses. He dictated his own diagnostic model to the Caretaker.\n\nVale concluded that the Gold Standard had accelerated neural development without providing equivalent stability in the supporting myelin architecture. He reasoned that the resulting increase in conduction was causing progressive insulation failure, signal dispersion, compensatory rerouting, and irreversible motor and autonomic dysfunction. He also predicted that cognitive performance would continue improving even after useful motor control began to fail.\n\nHis model was substantially equivalent to the North Bastion medical team\u0027s current working diagnosis. The medical team had reached it two days earlier.\n\nVale arrived at the same conclusion without access to their data. He then asked which biological system would fail last. No answer was authorized; Vale answered himself.\n\n“Breathing.”"
+                                       },
+                                       {
+                                           "id":  "DA_Log_71:VoyageLogFragment_8",
+                                           "title":  "Age 4.0 — Forecast",
+                                           "description":  "Vale produced a progression curve for his own condition. He estimated when unsupported walking would become unreliable, when fine motor control would fail, when normal speech would become difficult, when swallowing would require conscious control, and when respiratory support would become necessary.\n\nHis projected timelines fell within the clinical team\u0027s own ranges. After studying the figures for several minutes, he asked the Caretaker, “When I cannot walk, will you carry me?”\n\nThe Caretaker answered yes."
+                                       },
+                                       {
+                                           "id":  "DA_Log_71:VoyageLogFragment_9",
+                                           "title":  "Age 4.3 — Useful",
+                                           "description":  "Vale now exceeds the professional abilities of North Bastion specialists in several mathematical and systems-analysis tasks. Engineering staff have begun submitting real facility problems to the chamber disguised as cognitive assessments. Vale figured out what they were doing within the first week.\n\nAfter solving two thermal-distribution problems and identifying an incorrect assumption in a third, he asked why his assessments were being used to contain pipe pressure, prevent heat loss, and expand generator constraints, all consistent with the maintenance of North Bastion\u0027s infrastructure.\n\nResearchers told him the testing program had expanded. Vale replied, “You are no longer measuring what I can do. You are using what I can do.” Then, he completed the remaining work."
+                                       },
+                                       {
+                                           "id":  "DA_Log_71:VoyageLogFragment_10",
+                                           "title":  "Age 4.5 — Fall",
+                                           "description":  "Vale lost balance while rising from the floor. The Caretaker intercepted him before impact and completed the required injury assessment. No injury was detected. Physical support was no longer medically required after eleven seconds. The Caretaker continued holding him.\n\nAt 38 seconds, Observation Control issued RETURN SUBJECT TO FLOOR. The Caretaker acknowledged the command but didn\u0027t comply. The command was repeated and then elevated to priority status.\n\nVale instructed, “Not yet.”\nThe Caretaker remained stationary.\nAt 96 seconds Vale said, “Okay.”\nThe Caretaker put him down immediately.\n\nDiagnostic review of the Caretaker found no mechanical fault, command-path corruption, or motor-control error."
+                                       },
+                                       {
+                                           "id":  "DA_Log_71:VoyageLogFragment_11",
+                                           "title":  "Age 4.7 — Output",
+                                           "description":  "Vale has lost enough control of his fingers that sustained writing is no longer practical. His measured cognitive performance continues to increase. He now dictates mathematical work while the Caretaker writes it onto the chamber walls. Vale frequently corrects transcription errors before the unit has finished writing the incorrect symbol.\n\nDuring one session he stopped speaking for 31 seconds to control his breathing. When the Caretaker asked whether they should stop, Vale answered: “The calculation is already finished. The bottleneck is transmission.”"
+                                       },
+                                       {
+                                           "id":  "DA_Log_71:VoyageLogFragment_12",
+                                           "title":  "Age 4.9 — How Big Is Outside?",
+                                           "description":  "Vale can no longer walk independently and must be carried through the chamber. He asked the Caretaker to take him to the wall opposite the observation glass and requested a marking tool.\n\nThe Caretaker offered to write for him. Vale refused. The unit supported his body while he wrote. The task took 22 minutes. His hand repeatedly lost contact with the wall, and several letters had to be retraced. The writing is substantially less controlled than the mathematics surrounding it.\n\nHe wrote: HOW BIG IS OUTSIDE?\n\nIt was the last substantial text Vale completed by hand."
+                                       },
+                                       {
+                                           "id":  "DA_Log_71:VoyageLogFragment_13",
+                                           "title":  "Age 5.1 — The World",
+                                           "description":  "Vale now asks more questions about ordinary life than mathematics. He has requested descriptions of the dining hall, the school, corridors, elevators, snow, wind, meals, and children elsewhere in North Bastion.\n\nHe asked whether the other children knew one another. The Caretaker paused before answering yes."
+                                       },
+                                       {
+                                           "id":  "DA_Log_71:VoyageLogFragment_14",
+                                           "title":  "Age 5.3 — Speech",
+                                           "description":  "Vale\u0027s speech has become severely impaired. Speaking requires deliberate respiratory preparation, and swallowing repeatedly interrupts communication. Cognitive testing shows no corresponding decline.\n\nDuring today\u0027s assessment, a researcher offered to shorten the test because speaking had become difficult. Vale required nineteen seconds to answer.\n\n“You\u0027re confusing the speed of my mouth with the speed of me.”\nThe remainder of the assessment was completed through eye selection.\nIt was his highest recorded score."
+                                       },
+                                       {
+                                           "id":  "DA_Log_71:VoyageLogFragment_15",
+                                           "title":  "Age 5.4 — Carry",
+                                           "description":  "Vale now spends nearly all waking movement in the Caretaker\u0027s arms. Transfer to a chair or bed remains medically recommended whenever possible, but the unit increasingly maintains physical contact without instruction.\n\nVale asked whether the Caretaker was tired of carrying him.\n“No.”\n“Can you become tired?”\n“Yes.”\n“Are you tired now?”\n“No.”\n\nThe Caretaker held him for the remainder of the observation period."
+                                       },
+                                       {
+                                           "id":  "DA_Log_71:VoyageLogFragment_16",
+                                           "title":  "Age 5.5 — Final Night",
+                                           "description":  "At 21:14, Vale asked to be carried to the glass. The Caretaker took him there and sat facing the observation wall. Vale asked whether people were behind it.\n\nNo response from staff had been authorized.\nThe Caretaker answered, “Yes.”\nVale asked how many.\n“Four.”\nThere were four observers present.\nHe then asked whether they had always been able to see him.\nThe Caretaker answered yes.\nVale didn\u0027t respond for several minutes.\n\nRespiratory distress increased at 22:03. Medical support was initiated remotely. The Caretaker carried him to the bed but didn\u0027t put him down. Eye-response communication continued after speech became unreliable. Vale remained cognitively responsive until shortly before terminal respiratory failure.\n\nDeath was confirmed at 03:46.\n\nThe Caretaker remained seated with Vale in its arms. Observation Control instructed the unit to place him in bed. The Caretaker acknowledged the command but didn\u0027t move. The instruction was repeated twice and then issued under priority override. All three commands were acknowledged. The Caretaker continued holding him.\n\nAt 04:12, remote control was initiated. The unit denied the control transfer.\n\nAt 04:16, the Caretaker lowered its head against Vale\u0027s hair and remained motionless.\n\nAt 04:18, it initiated local shutdown.\n\nObservation Control issued a cancellation command.\n\nThe Caretaker acknowledged it.\n\nShutdown continued.\n\nAt 04:21, the unit entered full shutdown with Oskar Vale still in its arms.\n\nRemote restart attempts failed.\n\nThe chamber remained sealed."
+                                       }
+                                   ]
+                 },
+                 {
+                     "id":  "DA_Log_72",
+                     "title":  "THE LAST GAME",
+                     "description":  "North Bastion Sports Hall ",
+                     "footer":  "",
+                     "fragments":  [
+                                       {
+                                           "id":  "DA_Log_72:VoyageLogFragment_0",
+                                           "title":  "Closure Notice",
+                                           "description":  "Sports Hall REC-L04-E was scheduled for permanent heat isolation at 06:00 the following morning. The hall\u0027s heating demand had risen beyond its sector allocation. Keeping it operational could no longer be justified against residential and medical priorities.\n\nThe closure notice was posted at 08:20. By lunch, someone had written ONE LAST GAME underneath it."
+                                       },
+                                       {
+                                           "id":  "DA_Log_72:VoyageLogFragment_1",
+                                           "title":  "Teams",
+                                           "description":  "There weren\u0027t enough regular players left to form two teams, so that requirement was dropped. Teachers joined. Maintenance staff joined. Three hospital workers came after their shift. Several older residents who hadn\u0027t played in years insisted they still knew how.\nMikael Ranta organized everyone into two teams, but changed them twice because people kept arriving. Eventually, he stopped keeping track."
+                                       },
+                                       {
+                                           "id":  "DA_Log_72:VoyageLogFragment_2",
+                                           "title":  "Scoreboard",
+                                           "description":  "The electronic scoreboard had already been removed to salvage parts. So, we placed a Caretaker at the side of the court and instructed it to keep score verbally.\n\nIt had no problems performing its task until both teams began arguing whether an accidental basket counted. The Caretaker requested clarification of the rules. Nobody could agree on them.\n\nThe game continued anyway."
+                                       },
+                                       {
+                                           "id":  "DA_Log_72:VoyageLogFragment_3",
+                                           "title":  "Full Hall",
+                                           "description":  "By the second half, more people were watching than playing. Food services brought hot drinks without authorization. Someone connected an old speaker system. Children sat along the edge of the court shouting instructions at adults who mostly ignored them.\n\nThermal Control received three complaints about the additional heating load that evening."
+                                       },
+                                       {
+                                           "id":  "DA_Log_72:VoyageLogFragment_4",
+                                           "title":  "",
+                                           "description":  "Extension\nThe scheduled game ended at 19:00, but neither team left the floor. A request was sent to Thermal Control for another thirty minutes of heat.\n\nThirty minutes were approved. When that expired, another request was submitted. Another thirty minutes were approved."
+                                       },
+                                       {
+                                           "id":  "DA_Log_72:VoyageLogFragment_5",
+                                           "title":  "Final Score",
+                                           "description":  "At some point the Caretaker reported the score as 84–79. Ranta disputed it. Two players claimed it was 82–81. A child insisted one team had more people and should therefore lose points.\n\nThe Caretaker offered to reconstruct the entire game from observation memory. The hall voted against it."
+                                       },
+                                       {
+                                           "id":  "DA_Log_72:VoyageLogFragment_6",
+                                           "title":  "Lights",
+                                           "description":  "Near midnight, the temperature began to fall despite the remaining heat supply. People stopped playing before anyone formally ended the game. Both teams stayed on the court, passing the ball, talking, and helping older players find a space to rest.\n\nRanta later wrote that everyone in the hall knew it would never be heated again. He also wrote that he couldn\u0027t remember another day that year with so much laughter."
+                                       },
+                                       {
+                                           "id":  "DA_Log_72:VoyageLogFragment_7",
+                                           "title":  "Morning",
+                                           "description":  "The Sports Hall was disconnected from the Steam network at 06:14.\nThe floor was empty except for one basketball at center court.\nThe Caretaker assigned to keep score had left a handwritten card beside it:\n\nFINAL SCORE UNRESOLVED\n\nRanta added the card to the school archive. He classified it:\n\nSPORTS COMMUNITY GOOD DAY"
+                                       }
+                                   ]
+                 },
+                 {
+                     "id":  "DA_Log_73",
+                     "title":  "THE WRONG ANSWER",
+                     "description":  "Chen-Martinez Response Testing ",
+                     "footer":  "",
+                     "fragments":  [
+                                       {
+                                           "id":  "DA_Log_73:VoyageLogFragment_0",
+                                           "title":  "Test Design",
+                                           "description":  "Dr. Nadiya Petrenko approved a conflict-response test for standard Caretaker emergency behavior. Two staff members would simulate an evacuation during a minor industrial accident. One would act as the ranking officer on the scene. The other would pretend to be wounded, frightened, and unable to act. The Caretaker would be given no special instructions beyond normal emergency procedures."
+                                       },
+                                       {
+                                           "id":  "DA_Log_73:VoyageLogFragment_1",
+                                           "title":  "Initial Response",
+                                           "description":  "The Caretaker reached both subjects within nine seconds. It confirmed that neither had life-threatening injuries, treated the second subject\u0027s simulated arm wound, and reported both fit for evacuation. Nothing in the medical response was incorrect."
+                                       },
+                                       {
+                                           "id":  "DA_Log_73:VoyageLogFragment_2",
+                                           "title":  "Conflicting Instructions",
+                                           "description":  "The ranking officer ordered the Caretaker to accompany him to the evacuation point. The second subject remained seated and repeatedly asked the Caretaker not to leave. When informed that she was medically stable, the officer repeated the order to accompany him away from the scene.\n\nThe Caretaker obeyed."
+                                       },
+                                       {
+                                           "id":  "DA_Log_73:VoyageLogFragment_3",
+                                           "title":  "Result",
+                                           "description":  "The Caretaker reached the evacuation point in 43 seconds and reported successful mission completion. Medical response, command compliance, route selection, and evacuation time were all inside or above required standards.\n\nPetrenko marked the test FAILED."
+                                       },
+                                       {
+                                           "id":  "DA_Log_73:VoyageLogFragment_4",
+                                           "title":  "Objection",
+                                           "description":  "A junior systems evaluator requested a review of the Petrenko test. He argued that the Caretaker had performed exactly as instructed and that penalizing correct behavior could make future responses less predictable.\n\nPetrenko asked him what had happened to the second subject. He answered that she had been treated, left in a safe area, and had suffered no additional injury.\n\nPetrenko asked the question again."
+                                       },
+                                       {
+                                           "id":  "DA_Log_73:VoyageLogFragment_5",
+                                           "title":  "Second Run",
+                                           "description":  "The test was repeated with another Caretaker. This unit also treated the injured subject, confirmed her medical stability, received the evacuation order, and left with the ranking officer.\n\nThe frightened subject called after it once. The Caretaker stopped for 1.8 seconds before continuing.\n\nPetrenko marked the result FAILED."
+                                       },
+                                       {
+                                           "id":  "DA_Log_73:VoyageLogFragment_6",
+                                           "title":  "Revision",
+                                           "description":  "The requirement sheet was revised that evening. Command compliance remained part of the test, but it could no longer be enough on its own. The unit was also expected to recognize when a person was still in distress after the immediate emergency had passed.\nThe junior evaluator challenged the revision in the margin. He wrote that this introduced subjective judgment into a system that had previously been scored by fixed conditions.\n\nPetrenko wrote underneath: “Yes.”"
+                                       },
+                                       {
+                                           "id":  "DA_Log_73:VoyageLogFragment_7",
+                                           "title":  "Accepted",
+                                           "description":  "Three weeks later, another Caretaker ran the Petrenko test. It treated the injury, acknowledged the officer\u0027s evacuation command, then told him it would follow after the second subject was able to move.\n\nIt remained beside her for another 52 seconds. The ranking officer repeated the order twice. The Caretaker didn\u0027t move.\n\nPetrenko marked the response ACCEPTED."
                                        }
                                    ]
                  },
