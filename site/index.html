@@ -3,39 +3,57 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://raw.githubusercontent.com; connect-src 'self' https://api.github.com https://raw.githubusercontent.com; base-uri 'none'; form-action 'none';">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Last Caretaker Archive — Voyage Logs &amp; Quest Subtitles</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="modulepreload" href="app.js">
+<link rel="modulepreload" href="js/api/github.js">
+<link rel="modulepreload" href="js/core/clipboard.js">
+<link rel="modulepreload" href="js/core/formatters.js">
+<link rel="modulepreload" href="js/domain/diff.js">
+<link rel="modulepreload" href="js/domain/logs.js">
+<link rel="modulepreload" href="js/domain/sampledata.js">
+<link rel="modulepreload" href="js/domain/subtitles.js">
+<link rel="modulepreload" href="js/domain/timeline.js">
+<link rel="modulepreload" href="js/state/router.js">
+<link rel="modulepreload" href="js/state/store.js">
+<link rel="modulepreload" href="js/ui/browse.js">
+<link rel="modulepreload" href="js/ui/compare.js">
+<link rel="modulepreload" href="js/ui/device.js">
 </head>
 <body>
 
 <main>
+<h1 class="sr-only">Last Caretaker Archive Console</h1>
 <div class="device" id="device">
 
   <div class="toolbar">
-    <nav class="tabs" id="mode-tabs">
-      <button class="tab active" data-mode="browse">Browse</button>
-      <button class="tab" data-mode="compare">Compare</button>
+    <nav class="tabs" id="mode-tabs" role="tablist" aria-label="Archive view mode">
+      <button class="tab active" data-mode="browse" id="tab-mode-browse" role="tab" aria-selected="true" aria-controls="panel-browse">Browse</button>
+      <button class="tab" data-mode="compare" id="tab-mode-compare" role="tab" aria-selected="false" aria-controls="panel-compare">Compare</button>
     </nav>
 
     <div class="toolbar-controls" id="browse-controls">
       <div class="toolbar-row">
-        <div class="content-tabs" id="browse-content-tabs">
-          <button class="content-tab active" data-content="logs">Voyage Logs</button>
-          <button class="content-tab" data-content="subtitles">Quest Subtitles</button>
-          <button class="content-tab" data-content="sampledata">Sample Data</button>
+        <div class="content-tabs" id="browse-content-tabs" role="tablist" aria-label="Browse content category">
+          <button class="content-tab active" data-content="logs" id="tab-browse-logs" role="tab" aria-selected="true" aria-controls="logs-list">Voyage Logs</button>
+          <button class="content-tab" data-content="timeline" id="tab-browse-timeline" role="tab" aria-selected="false" aria-controls="timeline-list">Timeline</button>
+          <button class="content-tab" data-content="subtitles" id="tab-browse-subtitles" role="tab" aria-selected="false" aria-controls="subs-list">Quest Subtitles</button>
+          <button class="content-tab" data-content="sampledata" id="tab-browse-sampledata" role="tab" aria-selected="false" aria-controls="sampledata-list">Sample Data</button>
         </div>
         <label class="control" id="version-control">
           <span>Version</span>
-          <select id="browse-version"></select>
+          <select id="browse-version" aria-label="Select archive version"></select>
         </label>
       </div>
-      <div class="content-tabs hidden" id="sampledata-content-tabs">
-        <button class="content-tab active" data-content="all">All</button>
-        <button class="content-tab" data-content="field">Hologram</button>
-        <button class="content-tab" data-content="cave">Painting</button>
+      <div class="content-tabs hidden" id="sampledata-content-tabs" role="tablist" aria-label="Filter sample data type">
+        <button class="content-tab active" data-content="all" id="tab-sample-all" role="tab" aria-selected="true">All</button>
+        <button class="content-tab" data-content="field" id="tab-sample-field" role="tab" aria-selected="false">Hologram</button>
+        <button class="content-tab" data-content="cave" id="tab-sample-cave" role="tab" aria-selected="false">Painting</button>
       </div>
     </div>
 
@@ -43,98 +61,102 @@
       <div class="toolbar-row">
         <label class="control">
           <span>From</span>
-          <select id="compare-from"></select>
+          <select id="compare-from" aria-label="Compare base version"></select>
         </label>
         <label class="control">
           <span>To</span>
-          <select id="compare-to"></select>
+          <select id="compare-to" aria-label="Compare target version"></select>
         </label>
       </div>
-      <div class="content-tabs" id="compare-content-tabs">
-        <button class="content-tab active" data-content="logs">Voyage Logs</button>
-        <button class="content-tab" data-content="subtitles">Quest Subtitles</button>
-        <button class="content-tab" data-content="sampledata">Sample Data</button>
+      <div class="content-tabs" id="compare-content-tabs" role="tablist" aria-label="Compare content category">
+        <button class="content-tab active" data-content="logs" id="tab-compare-logs" role="tab" aria-selected="true" aria-controls="compare-logs">Voyage Logs</button>
+        <button class="content-tab" data-content="subtitles" id="tab-compare-subtitles" role="tab" aria-selected="false" aria-controls="compare-subtitles">Quest Subtitles</button>
+        <button class="content-tab" data-content="sampledata" id="tab-compare-sampledata" role="tab" aria-selected="false" aria-controls="compare-sampledata">Sample Data</button>
       </div>
     </div>
 
   </div>
 
-  <section id="panel-browse" class="panel active">
+  <section id="panel-browse" class="panel active" role="tabpanel" aria-labelledby="tab-mode-browse">
     <div class="screens">
-      <div class="screen list-screen">
-        <div class="screen-title-row">
-          <div class="screen-title" id="list-screen-title">DATA LOGS</div>
-          <span class="list-count" id="list-count"></span>
+      <div class="screen list-screen" id="list-screen">
+        <div class="screen-title-row" id="list-screen-header">
+          <h2 class="screen-title" id="list-screen-title">DATA LOGS</h2>
+          <div class="screen-title-meta">
+            <span class="list-count" id="list-count" aria-live="polite"></span>
+            <button type="button" class="list-toggle-btn" id="list-toggle-btn" aria-expanded="false" aria-controls="list-screen-scroll">EXPAND ▾</button>
+          </div>
         </div>
-        <div class="screen-scroll">
-          <div id="logs-list" class="entry-list"></div>
-          <div id="subs-list" class="entry-list hidden"></div>
-          <div id="sampledata-list" class="entry-list hidden"></div>
+        <div class="screen-scroll" id="list-screen-scroll" tabindex="0" role="region" aria-label="Archive entries list">
+          <div id="logs-list" class="entry-list" role="listbox" aria-label="Voyage Logs"></div>
+          <div id="timeline-list" class="entry-list hidden" role="listbox" aria-label="Timeline Events"></div>
+          <div id="subs-list" class="entry-list hidden" role="listbox" aria-label="Quest Subtitles"></div>
+          <div id="sampledata-list" class="entry-list hidden" role="listbox" aria-label="Sample Data Records"></div>
         </div>
       </div>
       <div class="screen detail-screen">
-        <div class="screen-scroll">
-          <div id="detail-pane" class="detail-pane">
-            <p class="empty-note">Select an entry from the list.</p>
+        <div class="screen-scroll" id="detail-screen-scroll" tabindex="0" role="region" aria-label="Entry details">
+          <div id="detail-pane" class="detail-pane" aria-label="Log detail view">
+            <p class="empty-note">Select an entry from the list to view its contents.</p>
           </div>
-          <div id="sampledata-detail-pane" class="detail-pane hidden">
-            <p class="empty-note">Select a record from the list.</p>
+          <div id="sampledata-detail-pane" class="detail-pane hidden" aria-label="Sample data detail view">
+            <p class="empty-note">Select a sample data record to inspect its field readings and memory payload.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="panel-compare" class="panel">
+  <section id="panel-compare" class="panel" role="tabpanel" aria-labelledby="tab-mode-compare">
     <div class="screens single">
       <div class="screen detail-screen wide">
-        <div class="screen-title">COMPARE — <span id="compare-scope-label">VOYAGE LOGS</span></div>
-        <div class="screen-scroll">
-          <div id="compare-logs" class="content-view active"></div>
-          <div id="compare-subtitles" class="content-view"></div>
-          <div id="compare-sampledata" class="content-view"></div>
+        <h2 class="screen-title">COMPARE — <span id="compare-scope-label">VOYAGE LOGS</span></h2>
+        <div class="screen-scroll" id="compare-screen-scroll" tabindex="0" role="region" aria-label="Compare diff view">
+          <div id="compare-logs" class="content-view active" role="region" aria-label="Voyage Logs Comparison"></div>
+          <div id="compare-subtitles" class="content-view" role="region" aria-label="Quest Subtitles Comparison"></div>
+          <div id="compare-sampledata" class="content-view" role="region" aria-label="Sample Data Comparison"></div>
         </div>
       </div>
     </div>
   </section>
 
-  <div id="status" class="status hidden"></div>
+  <div id="status" class="status hidden" role="status" aria-live="polite"></div>
 
-  <div class="control-strip">
-    <div class="control-block">
-      <div class="control-block-label">DISPLAY</div>
+  <div class="control-strip" role="region" aria-label="Hardware control panel">
+    <div class="control-block" role="group" aria-labelledby="label-display-group">
+      <div class="control-block-label" id="label-display-group" aria-hidden="true">DISPLAY</div>
       <div class="control-grid">
-        <button class="device-btn" type="button" data-action="brt-up">BRT +</button>
-        <button class="device-btn" type="button" data-action="con-up">CON +</button>
-        <button class="device-btn" type="button" data-action="sat-up">SAT +</button>
-        <button class="device-btn" type="button" data-action="brt-down">BRT -</button>
-        <button class="device-btn" type="button" data-action="con-down">CON -</button>
-        <button class="device-btn" type="button" data-action="sat-down">SAT -</button>
+        <button class="device-btn" type="button" data-action="brt-up" aria-label="Increase Brightness">BRT +</button>
+        <button class="device-btn" type="button" data-action="con-up" aria-label="Increase Contrast">CON +</button>
+        <button class="device-btn" type="button" data-action="sat-up" aria-label="Increase Saturation">SAT +</button>
+        <button class="device-btn" type="button" data-action="brt-down" aria-label="Decrease Brightness">BRT -</button>
+        <button class="device-btn" type="button" data-action="con-down" aria-label="Decrease Contrast">CON -</button>
+        <button class="device-btn" type="button" data-action="sat-down" aria-label="Decrease Saturation">SAT -</button>
       </div>
     </div>
 
     <div class="control-center">
-      <button class="device-btn disp-btn" type="button" id="disp-toggle">DISP ON</button>
-      <div class="led" id="status-led"></div>
+      <button class="device-btn disp-btn" type="button" id="disp-toggle" aria-label="Toggle Display Power" aria-pressed="true">DISP ON</button>
+      <div class="led" id="status-led" role="status" aria-label="Display power indicator"></div>
     </div>
 
-    <div class="control-block">
-      <div class="control-block-label">SETTINGS</div>
+    <div class="control-block" role="group" aria-labelledby="label-settings-group">
+      <div class="control-block-label" id="label-settings-group" aria-hidden="true">SETTINGS</div>
       <div class="control-grid">
-        <button class="device-btn" type="button" id="btn-exe">EXE</button>
-        <button class="device-btn" type="button" id="btn-up">UP</button>
-        <button class="device-btn" type="button" id="btn-exit">EXIT</button>
-        <button class="device-btn" type="button" id="btn-prev">PREV</button>
-        <button class="device-btn" type="button" id="btn-down">DOWN</button>
-        <button class="device-btn" type="button" id="btn-next">NEXT</button>
+        <button class="device-btn" type="button" id="btn-exe" aria-label="Execute or Select">EXE</button>
+        <button class="device-btn" type="button" id="btn-up" aria-label="Scroll detail view up">UP</button>
+        <button class="device-btn" type="button" id="btn-exit" aria-label="Clear filter and exit">EXIT</button>
+        <button class="device-btn" type="button" id="btn-prev" aria-label="Select previous entry">PREV</button>
+        <button class="device-btn" type="button" id="btn-down" aria-label="Scroll detail view down">DOWN</button>
+        <button class="device-btn" type="button" id="btn-next" aria-label="Select next entry">NEXT</button>
       </div>
     </div>
   </div>
 
-  <div class="terminal-bar" id="terminal-bar">
-    <span class="terminal-prompt">user@archive:~$</span>
-    <input type="search" id="filter-input" class="terminal-input" placeholder="type to filter…" autocomplete="off">
-    <button class="device-btn terminal-link-btn" type="button" id="copy-link-btn">COPY ENTRY LINK</button>
+  <div class="terminal-bar" id="terminal-bar" role="search" aria-label="Entry filter search">
+    <label class="terminal-prompt" for="filter-input">user@archive:~$</label>
+    <input type="search" id="filter-input" class="terminal-input" placeholder="Type to filter entries…" autocomplete="off" aria-label="Filter archive entries">
+    <button class="device-btn terminal-link-btn" type="button" id="copy-link-btn" aria-label="Copy permalink for current view">COPY ENTRY LINK</button>
   </div>
 
   <button class="device-btn selection-link-btn hidden" type="button" id="selection-link-btn" aria-label="Copy text link" title="Copy text link">🔗</button>
@@ -142,7 +164,7 @@
 </div>
 </main>
 
-<script src="https://cdn.jsdelivr.net/npm/diff@5.2.0/dist/diff.min.js"></script>
-<script src="app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/diff@5.2.0/dist/diff.min.js" integrity="sha384-lJJVaUgxmk/PVfQnAsGN1QuJZrE+n6bg2EMu33yVZOJ2av/3UzTHbmnPCI7ENJYa" crossorigin="anonymous"></script>
+<script type="module" src="app.js"></script>
 </body>
 </html>

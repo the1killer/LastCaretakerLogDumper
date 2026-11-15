@@ -6,22 +6,91 @@ on:
       - main
     paths:
       - 'site/**'
+      - 'voyage_logs_dump.json'
+      - 'voyage_quest_subtitles_dump.json'
+      - 'voyage_sampledata_text_dump.json'
       - '.github/workflows/deploy.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'site/**'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 
 jobs:
+  test:
+    name: Test site
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Run site tests
+        run: node --test site/tests/*.test.mjs
+
   deploy:
     name: Deploy
+    needs: test
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
     permissions:
       contents: write
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Stage static site and generate versions.json
+        run: |
+          mkdir -p _dist
+          cp -R site/. _dist/
+          rm -rf _dist/tests _dist/README.md
+          node -e '
+            const { execFileSync } = require("child_process");
+            const { writeFileSync } = require("fs");
+            const paths = [
+              "voyage_logs_dump.json",
+              "voyage_quest_subtitles_dump.json",
+              "voyage_sampledata_text_dump.json",
+              "site/sampledata/data.json",
+              "site/timeline/data.json",
+            ];
+            const raw = execFileSync("git", ["log", "--format=%H%x1f%aI%x1f%s%x1e", "--", ...paths], { encoding: "utf8" });
+            const versions = raw
+              .split("\x1e")
+              .filter(Boolean)
+              .map((rec) => {
+                const [sha, date, message] = rec.trim().split("\x1f");
+                return { sha, message, date };
+              })
+              .filter((v) => v.sha && v.date)
+              .sort((a, b) => new Date(b.date) - new Date(a.date));
+            writeFileSync("_dist/versions.json", JSON.stringify(versions));
+          '
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
+          publish_dir: ./_dist
